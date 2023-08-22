@@ -24,21 +24,24 @@ const App = () => {
     mouseY.set(clientY - top);
   }
 
-  const initialState = {
+  /*  const initialState = {
     themeDark:
       typeof window !== "undefined"
         ? window.localStorage.getItem("theme")
-        : false,
-  };
+        : "dark",
+  }; */
+
+  const themeDark = typeof window === "undefined";
+  let getThemeDark = !themeDark ? localStorage.getItem("theme") : "light";
 
   return (
-    <div className={initialState.themeDark}>
+    <div className={getThemeDark}>
       <Navbar />
       <div
         className="relative overflow-hidden bg-white dark:bg-black"
         ref={ref}
       >
-        <HomePage getModeThemePage={initialState.themeDark} />
+        <HomePage getThemeDark={getThemeDark} />
 
         <SectionTwoHome refScroll={ref} />
 

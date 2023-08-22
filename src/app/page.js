@@ -10,6 +10,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const App = () => {
+  /* const getModeThemePage = localStorage.getItem("theme"); */
+
   const ref = useRef(null);
 
   let mouseX = useMotionValue(0);
@@ -22,14 +24,21 @@ const App = () => {
     mouseY.set(clientY - top);
   }
 
+  const initialState = {
+    themeDark:
+      typeof window !== "undefined"
+        ? window.localStorage.getItem("theme")
+        : false,
+  };
+
   return (
-    <div>
+    <div className={initialState.themeDark}>
       <Navbar />
       <div
         className="relative overflow-hidden bg-white dark:bg-black"
         ref={ref}
       >
-        <HomePage />
+        <HomePage getModeThemePage={initialState.themeDark} />
 
         <SectionTwoHome refScroll={ref} />
 

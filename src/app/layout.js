@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const getModeThemePage = localStorage.getItem("theme");
+  const getModeThemePage = localStorage?.getItem("theme");
 
   return (
     <html lang="es" className={getModeThemePage}>

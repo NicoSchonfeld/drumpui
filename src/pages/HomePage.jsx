@@ -12,7 +12,7 @@ import boxGradientTopWhite from "@/assets/boxGradientTopWhite.png";
 import Link from "next/link";
 
 const HomePage = () => {
-  const getModeThemePage = window.localStorage.getItem("theme");
+  const getModeThemePage = localStorage?.getItem("theme");
 
   return (
     <>

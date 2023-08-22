@@ -37,7 +37,7 @@ const App = () => {
         className="relative overflow-hidden bg-white dark:bg-black"
         ref={ref}
       >
-        <HomePage />
+        <HomePage getModeThemePage={getModeThemePage} />
 
         <SectionTwoHome refScroll={ref} />
 

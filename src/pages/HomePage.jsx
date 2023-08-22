@@ -10,8 +10,7 @@ import boxGradientTop from "@/assets/boxGradientTop.png";
 import boxGradientTopWhite from "@/assets/boxGradientTopWhite.png";
 import Link from "next/link";
 
-const HomePage = () => {
-  const getModeThemePage = localStorage.getItem("theme");
+const HomePage = ({ getModeThemePage }) => {
   return (
     <>
       <main className="h-auto relative overflow-hidden pb-56">

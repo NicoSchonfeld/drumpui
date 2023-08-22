@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import LogoIcon from "@/components/LogoIcon";
 import { AiFillGithub } from "react-icons/ai";
@@ -10,7 +11,9 @@ import boxGradientTop from "@/assets/boxGradientTop.png";
 import boxGradientTopWhite from "@/assets/boxGradientTopWhite.png";
 import Link from "next/link";
 
-const HomePage = ({ getModeThemePage }) => {
+const HomePage = () => {
+  const getModeThemePage = window.localStorage.getItem("theme");
+
   return (
     <>
       <main className="h-auto relative overflow-hidden pb-56">

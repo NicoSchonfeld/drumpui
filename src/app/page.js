@@ -22,22 +22,14 @@ const App = () => {
     mouseY.set(clientY - top);
   }
 
-  const getModeThemePage = localStorage.getItem("theme");
-
-  useEffect(() => {
-    /* light || dark */
-
-    console.log(getModeThemePage);
-  }, []);
-
   return (
-    <div className={getModeThemePage}>
+    <div>
       <Navbar />
       <div
         className="relative overflow-hidden bg-white dark:bg-black"
         ref={ref}
       >
-        <HomePage getModeThemePage={getModeThemePage} />
+        <HomePage />
 
         <SectionTwoHome refScroll={ref} />
 

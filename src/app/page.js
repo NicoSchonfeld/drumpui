@@ -22,8 +22,16 @@ const App = () => {
     mouseY.set(clientY - top);
   }
 
+  const getModeThemePage = localStorage.getItem("theme");
+
+  useEffect(() => {
+    /* light || dark */
+
+    console.log(getModeThemePage);
+  }, []);
+
   return (
-    <div>
+    <div className={getModeThemePage}>
       <Navbar />
       <div
         className="relative overflow-hidden bg-white dark:bg-black"

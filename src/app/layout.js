@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -12,16 +9,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const getModeThemePage = localStorage.getItem("theme");
-
-  useEffect(() => {
-    /* light || dark */
-
-    console.log(getModeThemePage);
-  }, []);
-
   return (
-    <html lang="es" className={getModeThemePage}>
+    <html lang="es">
       <body className={inter.className}>
         <div>{children}</div>
       </body>

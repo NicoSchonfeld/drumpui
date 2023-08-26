@@ -1,3 +1,5 @@
+"use client";
+
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -9,10 +11,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const getModeThemePage = localStorage.getItem("theme");
   return (
     <html lang="es">
       <body className={inter.className}>
-        <div>{children}</div>
+        <div className={getModeThemePage}>{children}</div>
       </body>
     </html>
   );

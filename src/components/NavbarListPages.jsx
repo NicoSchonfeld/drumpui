@@ -36,6 +36,14 @@ const NavbarListPages = () => {
       path: "/docs/components/breadcrumb",
     },
   ];
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <nav className="sr-only lg:not-sr-only">
@@ -73,6 +81,7 @@ const NavbarListPages = () => {
                       ? "text-black ps-5 dark:text-white/80"
                       : "text-black/50 hover:text-black/40 dark:text-white/50 dark:hover:text-white/40 transition-all ps-5"
                   }
+                  onClick={() => scrollUp()}
                 >
                   {dato.title}
                 </Link>
@@ -117,6 +126,7 @@ const NavbarListPages = () => {
                       ? "text-black ps-5 dark:text-white/80"
                       : "text-black/50 hover:text-black/40 dark:text-white/50 dark:hover:text-white/40 transition-all ps-5"
                   }
+                  onClick={() => scrollUp()}
                 >
                   {dato.title}
                 </Link>

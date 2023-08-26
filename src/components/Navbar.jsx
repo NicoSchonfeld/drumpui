@@ -5,15 +5,17 @@ import LogoIcon from "./LogoIcon";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+
 const Navbar = () => {
   const getModeThemePage = localStorage.getItem("theme");
 
   const pathname = useParams();
 
   const listNavbarHeaderPage = [
-    { id: "home", title: "Home", path: "/" },
-    { id: "docs", title: "Docs", path: "/docs/guide/introduction" },
-    { id: "components", title: "Components", path: "/docs/components/avatar" },
+    { id: "home", title: "home", path: "/" },
+    { id: "docs", title: "docs", path: "/docs/guide/introduction" },
+    { id: "components", title: "components", path: "/docs/components/avatar" },
   ];
 
   const toggleThemeLight = () => {
@@ -59,14 +61,14 @@ const Navbar = () => {
                   className="text-white sr-only xl:not-sr-only"
                   onClick={toggleThemeLight}
                 >
-                  Light
+                  <BsFillSunFill />
                 </button>
               ) : (
                 <button
-                  className="text-red-500 sr-only xl:not-sr-only"
+                  className="text-black sr-only xl:not-sr-only"
                   onClick={toggleThemeDark}
                 >
-                  Dark
+                  <BsFillMoonFill />
                 </button>
               )}
             </li>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import NavbarListPages from "@/components/NavbarListPages";
@@ -12,8 +12,29 @@ import CodeComponent from "@/components/CodeComponent";
 
 const Inputs = () => {
   const [showPassword, setShowPassword] = useState(false);
+  /* const [backToTopScroll, setBackToTopScroll] = useState(false); */
+
   const togglePassword = () => {
     setShowPassword(!showPassword);
+  };
+
+  const [backToTopScroll, setBackToTopScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        setBackToTopScroll(true);
+      } else {
+        setBackToTopScroll(false);
+      }
+    });
+  }, []);
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -21,6 +42,26 @@ const Inputs = () => {
       <Navbar />
       <div className="overflow-hidden bg-white dark:bg-black">
         <section className="relative container mx-auto w-full flex items-start justify-end mt-20">
+          {backToTopScroll && (
+            <button
+              onClick={() => scrollUp()}
+              className="z-50 fixed right-10 bottom-10 transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 rotate-180"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          )}
+
           <div className="fixed top-[120px] left-20 lg:left-52">
             <NavbarListPages />
           </div>
@@ -52,7 +93,7 @@ const Inputs = () => {
               <p className="text-2xl font-bold">Left and Right Addons</p>
               <WindowsComponents col="col">
                 <span className="inline-flex overflow-hidden rounded-md border dark:border-white/50 shadow-sm">
-                  <span className="flex items-center justify-center p-2 text-gray-600 bg-gray-200">
+                  <span className="flex items-center justify-center text-sm md:text-base p-2 text-gray-600 bg-gray-200">
                     +54
                   </span>
                   <input
@@ -64,16 +105,16 @@ const Inputs = () => {
                 </span>
 
                 <span className="inline-flex overflow-hidden rounded-md border dark:border-white/50 shadow-sm">
-                  <span className="flex items-center justify-center p-2 text-gray-600 bg-gray-200">
+                  <span className="flex items-center justify-center p-2 text-gray-600 bg-gray-200 text-sm md:text-base">
                     https://
                   </span>
                   <input
                     id="input"
                     placeholder="website"
                     type="text"
-                    className="transition rounded border dark:border-white/20 px-3 py-1 bg-white dark:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-600 text-gray-600 dark:text-white"
+                    className="w-40 md:w-auto transition rounded border dark:border-white/20 px-3 py-1 bg-white dark:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-600 text-gray-600 dark:text-white"
                   />
-                  <span className="flex items-center justify-center p-2 text-gray-600 bg-gray-200">
+                  <span className="flex items-center justify-center p-2 text-gray-600 bg-gray-200 text-sm md:text-base">
                     .com
                   </span>
                 </span>
@@ -175,6 +216,7 @@ const Inputs = () => {
                 href="/docs/components/card"
                 rel="noopener noreferrer"
                 className="border border-dark/50 dark:border-white/30 rounded-md px-3 py-2 flex items-center justify-center space-x-2 dark:hover:shadow-white/30 hover:shadow-md transition-all"
+                onClick={() => scrollUp()}
               >
                 <svg
                   className="h-5 w-5 shrink-0 dark:text-pink-500 text-pink-500 rotate-90"
@@ -198,6 +240,7 @@ const Inputs = () => {
                 href="/docs/components/modal"
                 rel="noopener noreferrer"
                 className="border border-dark/50 dark:border-white/30 rounded-md px-3 py-2 flex items-center justify-center space-x-2 dark:hover:shadow-white/30 hover:shadow-md transition-all"
+                onClick={() => scrollUp()}
               >
                 <p>Modal</p>{" "}
                 <svg

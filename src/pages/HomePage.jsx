@@ -11,11 +11,11 @@ import boxGradientTop from "@/assets/boxGradientTop.png";
 import boxGradientTopWhite from "@/assets/boxGradientTopWhite.png";
 import Link from "next/link";
 
-const HomePage = ({ getThemeDark }) => {
+const HomePage = ({ getModeThemePage }) => {
   return (
     <>
       <main className="h-auto relative overflow-hidden pb-56">
-        {getThemeDark === "dark" ? (
+        {getModeThemePage === "dark" ? (
           <Image
             src={boxGradientTop}
             alt="boxGradientTop"
@@ -69,8 +69,8 @@ const HomePage = ({ getThemeDark }) => {
                 transition={{ duration: 0.5 }}
               >
                 <LogoIcon
-                  color={getThemeDark === "dark" ? "white" : "black"}
-                  ui={getThemeDark === "dark" ? "#EC4899" : "white"}
+                  color={getModeThemePage === "dark" ? "white" : "black"}
+                  ui={getModeThemePage === "dark" ? "#EC4899" : "white"}
                   w={150}
                   h={50}
                 />
@@ -86,12 +86,12 @@ const HomePage = ({ getThemeDark }) => {
               ></motion.div>
             </div>
 
-            <div className="overflow-hidden bg-white dark:bg-black py-2 z-10">
+            <div className="overflow-hidden bg-white dark:bg-black py-2 px-10 z-10">
               <motion.h1
                 initial={{ opacity: 1, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-7xl font-extrabold max-w-5xl text-center"
+                className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-5xl md:text-7xl font-extrabold max-w-5xl text-center"
               >
                 Plantillas listas para crear tu
               </motion.h1>
@@ -102,7 +102,7 @@ const HomePage = ({ getThemeDark }) => {
                 initial={{ opacity: 1, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-7xl font-extrabold max-w-5xl text-center"
+                className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-5xl md:text-7xl font-extrabold max-w-5xl text-center"
               >
                 web mucho más rapido.
               </motion.h2>
@@ -117,12 +117,12 @@ const HomePage = ({ getThemeDark }) => {
               ></motion.div>
             </div>
 
-            <div className="overflow-hidden bg-white dark:bg-black py-2 z-10">
+            <div className="overflow-hidden bg-white dark:bg-black py-2 px-10 z-10">
               <motion.p
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-black/50 dark:text-white/50"
+                className="text-black/50 dark:text-white/50 text-center"
               >
                 Re-usable components built using Radix UI and Tailwind CSS.
               </motion.p>

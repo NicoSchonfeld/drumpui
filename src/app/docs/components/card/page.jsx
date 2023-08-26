@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import NavbarListPages from "@/components/NavbarListPages";
@@ -11,11 +11,50 @@ import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
 
 const Card = () => {
+  const [backToTopScroll, setBackToTopScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        setBackToTopScroll(true);
+      } else {
+        setBackToTopScroll(false);
+      }
+    });
+  }, []);
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <Navbar />
       <div className="overflow-hidden bg-white dark:bg-black">
         <section className="relative container mx-auto w-full flex items-start justify-end mt-20">
+          {backToTopScroll && (
+            <button
+              onClick={() => scrollUp()}
+              className="z-50 fixed right-10 bottom-10 transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 rotate-180"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          )}
+
           <div className="fixed top-[120px] left-20 lg:left-52">
             <NavbarListPages />
           </div>
@@ -61,7 +100,7 @@ const Card = () => {
               <p className="text-2xl font-bold">Demo</p>
 
               <WindowsComponents>
-                <div className="w-[400px] bg-white dark:bg-gray-900 rounded-lg p-4 shadow-sm shadow-indigo-100 dark:shadow-black/50">
+                <div className="w-[200px] md:w-[400px] bg-white dark:bg-gray-900 rounded-lg p-4 shadow-sm shadow-indigo-100 dark:shadow-black/50">
                   <img
                     alt="photo-1434389677669"
                     src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
@@ -98,6 +137,7 @@ const Card = () => {
                 href="/docs/components/button"
                 rel="noopener noreferrer"
                 className="border border-dark/50 dark:border-white/30 rounded-md px-3 py-2 flex items-center justify-center space-x-2 dark:hover:shadow-white/30 hover:shadow-md transition-all"
+                onClick={() => scrollUp()}
               >
                 <svg
                   className="h-5 w-5 shrink-0 dark:text-pink-500 text-pink-500 rotate-90"
@@ -121,6 +161,7 @@ const Card = () => {
                 href="/docs/components/input"
                 rel="noopener noreferrer"
                 className="border border-dark/50 dark:border-white/30 rounded-md px-3 py-2 flex items-center justify-center space-x-2 dark:hover:shadow-white/30 hover:shadow-md transition-all"
+                onClick={() => scrollUp()}
               >
                 <p>Input</p>{" "}
                 <svg

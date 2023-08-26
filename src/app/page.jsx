@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import HomePage from "@/pages/HomePage";
 
 import SectionTwoHome from "@/pages/SectionTwoHome";
@@ -10,7 +10,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const App = () => {
-  /* const getModeThemePage = localStorage.getItem("theme"); */
+  const getModeThemePage = localStorage.getItem("theme");
 
   const ref = useRef(null);
 
@@ -24,31 +24,71 @@ const App = () => {
     mouseY.set(clientY - top);
   }
 
-  /*  const initialState = {
-    themeDark:
-      typeof window !== "undefined"
-        ? window.localStorage.getItem("theme")
-        : "dark",
-  }; */
+  const [backToTopScroll, setBackToTopScroll] = useState(false);
 
-  const themeDark = typeof window === "undefined";
-  let getThemeDark = !themeDark ? localStorage.getItem("theme") : "light";
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        setBackToTopScroll(true);
+      } else {
+        setBackToTopScroll(false);
+      }
+    });
+  }, []);
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <div className={getThemeDark}>
+    <div className={getModeThemePage}>
       <Navbar />
       <div
         className="relative overflow-hidden bg-white dark:bg-black"
         ref={ref}
       >
-        <HomePage getThemeDark={getThemeDark} />
+        {backToTopScroll && (
+          <button
+            onClick={() => scrollUp()}
+            className="z-50 fixed right-10 bottom-10 transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 rotate-180"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+        )}
+
+        <HomePage getModeThemePage={getModeThemePage} />
 
         <SectionTwoHome refScroll={ref} />
 
-        <section className="relative h-screen w-full overflow-hidden">
-          <div className="relative w-full h-auto flex items-start justify-center space-x-5">
+        <section className="relative w-full h-auto overflow-hidden flex flex-col items-center justify-center gap-10 py-40">
+          <div className="flex flex-col items-center gap-5 px-10">
+            <p className="text-black dark:text-white font-bold text-3xl text-center">
+              Title dsajdjasd asd asd s
+            </p>
+
+            {/* <p className="text-black/50 dark:text-white/50 text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+              et ut id debitis enim consequatur vel dolorum cum vero fugiat.
+            </p> */}
+          </div>
+
+          <div className="relative px-10 w-full flex items-center justify-center gap-5 lg:gap-10 md:flex-row flex-col">
             <div
-              className="group relative max-w-sm py-5 px-5 rounded-xl border border-white/10 bg-black shadow-2xl"
+              className="group relative max-w-sm py-5 px-5 rounded-xl w-[300px] md:w-auto border border-black/20 dark:border-white/20 bg-white dark:bg-black dark:shadow-md dark:shadow-pink-500/20 shadow-md"
               onMouseMove={handleMouseMove}
             >
               <motion.div
@@ -69,11 +109,11 @@ const App = () => {
                   Byline
                 </h3>
                 <div className="mt-2 flex items-center gap-x-2">
-                  <span className="text-xl font-bold tracking-tight text-white">
+                  <span className="text-xl font-bold tracking-tight dark:text-white text-black">
                     Hero
                   </span>
                 </div>
-                <p className="mt-6 text-base leading-7 text-gray-300">
+                <p className="mt-6 text-base leading-7 dark:text-gray-300 text-gray-500">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit,
                   facilis illum eum ullam nostrum atque quam.
                 </p>
@@ -81,7 +121,7 @@ const App = () => {
             </div>
 
             <div
-              className="group relative max-w-sm py-5 px-5 rounded-xl border border-white/10 bg-black shadow-2xl"
+              className="group relative max-w-sm py-5 px-5 rounded-xl w-[300px] md:w-auto border border-black/20 dark:border-white/20 bg-white dark:bg-black dark:shadow-md dark:shadow-pink-500/20 shadow-md"
               onMouseMove={handleMouseMove}
             >
               <motion.div
@@ -102,11 +142,11 @@ const App = () => {
                   Byline
                 </h3>
                 <div className="mt-2 flex items-center gap-x-2">
-                  <span className="text-xl font-bold tracking-tight text-white">
+                  <span className="text-xl font-bold tracking-tight dark:text-white text-black">
                     Hero
                   </span>
                 </div>
-                <p className="mt-6 text-base leading-7 text-gray-300">
+                <p className="mt-6 text-base leading-7 dark:text-gray-300 text-gray-500">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit,
                   facilis illum eum ullam nostrum atque quam.
                 </p>
@@ -114,7 +154,7 @@ const App = () => {
             </div>
 
             <div
-              className="group relative max-w-sm py-5 px-5 rounded-xl border border-white/10 bg-black shadow-2xl"
+              className="group relative max-w-sm py-5 px-5 rounded-xl w-[300px] md:w-auto border border-black/20 dark:border-white/20 bg-white dark:bg-black dark:shadow-md dark:shadow-pink-500/20 shadow-md"
               onMouseMove={handleMouseMove}
             >
               <motion.div
@@ -135,11 +175,11 @@ const App = () => {
                   Byline
                 </h3>
                 <div className="mt-2 flex items-center gap-x-2">
-                  <span className="text-xl font-bold tracking-tight text-white">
+                  <span className="text-xl font-bold tracking-tight dark:text-white text-black">
                     Hero
                   </span>
                 </div>
-                <p className="mt-6 text-base leading-7 text-gray-300">
+                <p className="mt-6 text-base leading-7 dark:text-gray-300 text-gray-500">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit,
                   facilis illum eum ullam nostrum atque quam.
                 </p>

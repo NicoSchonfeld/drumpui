@@ -8,11 +8,11 @@ const NavbarListPages = () => {
   const pathname = usePathname();
 
   const listNavGuide = [
-    {
+    /* {
       id: "introduction",
       title: "Introduction",
       path: "/docs/guide/introduction",
-    },
+    }, */
     {
       id: "installation",
       title: "Installation",
@@ -52,10 +52,10 @@ const NavbarListPages = () => {
           open
         >
           <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 transition-all">
-            <h2 className="font-medium text-black dark:text-white">Guide</h2>
+            <h2 className="font-bold text-pink-500">Guide</h2>
 
             <svg
-              className="h-5 w-5 shrink-0 transition duration-300 group-open:rotate-[15] dark:text-white text-black rotate-90"
+              className="h-5 w-5 shrink-0 transition duration-300 group-open:rotate-[15] text-pink-500 rotate-90"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -95,12 +95,10 @@ const NavbarListPages = () => {
           open
         >
           <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 transition-all">
-            <h2 className="font-medium text-black dark:text-white">
-              Components
-            </h2>
+            <h2 className="font-bold text-pink-500">Components</h2>
 
             <svg
-              className="h-5 w-5 shrink-0 transition duration-300 group-open:rotate-[15] dark:text-white text-black rotate-90"
+              className="h-5 w-5 shrink-0 transition duration-300 group-open:rotate-[15] text-pink-500 rotate-90"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

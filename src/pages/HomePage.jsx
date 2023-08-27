@@ -124,7 +124,7 @@ const HomePage = ({ getModeThemePage }) => {
                 transition={{ duration: 0.5 }}
                 className="text-black/50 dark:text-white/50 text-center"
               >
-                Re-usable components built using Radix UI and Tailwind CSS.
+                Components created on top of Tailwind CSS
               </motion.p>
             </div>
 
@@ -145,14 +145,14 @@ const HomePage = ({ getModeThemePage }) => {
                 className="flex items-center space-x-5"
               >
                 <Link
-                  href="/docs/guide/introduction"
+                  href="/docs/guide/installation"
                   rel="noopener noreferrer"
-                  className="transition rounded border border-pink-500 hover:border-pink-700 bg-pink-500 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:text-white"
+                  className="transition rounded border border-pink-500 hover:border-pink-700 bg-pink-500 px-6 py-3 text-sm font-medium text-white hover:bg-pink-700 hover:text-white"
                 >
                   Get started
                 </Link>
 
-                <button className="flex items-center transition rounded border border-gray-900 hover:border-gray-700 bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white">
+                <button className="flex items-center transition rounded border border-gray-900 hover:border-gray-700 bg-gray-900 px-6 py-3 text-sm font-medium text-white hover:bg-gray-700 hover:text-white">
                   <AiFillGithub className="me-2" /> Github
                 </button>
               </motion.div>

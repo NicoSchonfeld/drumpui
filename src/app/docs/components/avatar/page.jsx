@@ -63,7 +63,9 @@ const Avatar = () => {
           </div>
 
           <div className="w-full text-black dark:text-white py-10 sm:px-10 md:px-32 lg:ps-96 px-10">
-            <h3 className="text-4xl font-extrabold mb-5">Avatar</h3>
+            <h3 className="text-4xl font-extrabold mb-5 text-pink-500">
+              Avatar
+            </h3>
 
             <p className="max-w-3xl mb-20">
               The Avatar component is used to represent a user, and displays the
@@ -102,67 +104,94 @@ const Avatar = () => {
 
               <CodeComponent>
                 <pre className="mt-10 text-white">
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">p-4 w-[500px] max-auto</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">
-                    animate-pulse flex space-x-4
-                  </span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">flex-1 space-y-3 py-1</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  &lt;/<span className="text-red-500">div</span>&gt;
+                  <code>
+                    &lt;<span className="text-red-500">img</span>{" "}
+                    <span className="text-yellow-500">className</span>=
+                    <span className="text-yellow-500">"</span>
+                    <span className="text-gray-400">
+                      rounded-full w-20 h-20
+                    </span>
+                    <span className="text-yellow-500">"</span>
+                    <br />
+                    <span className="text-yellow-500">src</span>=
+                    <span className="text-yellow-500">
+                      "<span className="text-gray-400">...</span>"
+                    </span>
+                    <br />
+                    <span className="text-yellow-500">alt</span>=
+                    <span className="text-yellow-500">
+                      "<span className="text-gray-400">...</span>"
+                    </span>
+                    <br />
+                    /&gt;
+                    <br />
+                    <br />
+                    &lt;<span className="text-red-500">img</span>{" "}
+                    <span className="text-yellow-500">className</span>=
+                    <span className="text-yellow-500">"</span>
+                    <span className="text-gray-400">
+                      rounded-full w-20 h-20 <br /> p-0.5 outline
+                      outline-green-500
+                    </span>
+                    <span className="text-yellow-500">"</span>
+                    <br />
+                    <span className="text-yellow-500">src</span>=
+                    <span className="text-yellow-500">
+                      "<span className="text-gray-400">...</span>"
+                    </span>
+                    <br />
+                    <span className="text-yellow-500">alt</span>=
+                    <span className="text-yellow-500">
+                      "<span className="text-gray-400">...</span>"
+                    </span>
+                    <br />
+                    /&gt;
+                    <br />
+                    <br />
+                    &lt;<span className="text-red-500">div</span>{" "}
+                    <span className="text-yellow-500">className</span>=
+                    <span className="text-yellow-500">"</span>
+                    <span className="text-gray-400">relative</span>
+                    <span className="text-yellow-500">"</span>
+                    &gt;
+                    <br />
+                    {"    "}&lt;<span className="text-red-500">div</span>{" "}
+                    <span className="text-yellow-500">className</span>=
+                    <span className="text-yellow-500">"</span>
+                    <span className="text-gray-400">
+                      w-[16px] h-[16px] bg-green-500 rounded-full <br />
+                      {"    "}absolute top-0 right-0 flex items-center
+                      justify-center
+                    </span>
+                    <span className="text-yellow-500">"</span>&gt;&lt;/
+                    <span className="text-red-500">div</span>&gt;
+                    <br />
+                    <br />
+                    {"    "}&lt;<span className="text-red-500">img</span>{" "}
+                    <span className="text-yellow-500">className</span>=
+                    <span className="text-yellow-500">"</span>
+                    <span className="text-gray-400">
+                      rounded-full w-20 h-20 <br /> {"    "}p-0.5 outline
+                      outline-green-500
+                    </span>
+                    <span className="text-yellow-500">"</span>
+                    <br />
+                    {"    "}
+                    <span className="text-yellow-500">src</span>=
+                    <span className="text-yellow-500">
+                      "<span className="text-gray-400">...</span>"
+                    </span>
+                    <br />
+                    {"    "}
+                    <span className="text-yellow-500">alt</span>=
+                    <span className="text-yellow-500">
+                      "<span className="text-gray-400">...</span>"
+                    </span>
+                    <br />
+                    {"    "}/&gt;
+                    <br />
+                    &lt;/<span className="text-red-500">div</span>&gt;
+                  </code>
                 </pre>
               </CodeComponent>
             </div>

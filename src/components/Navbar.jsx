@@ -14,7 +14,11 @@ const Navbar = () => {
 
   const listNavbarHeaderPage = [
     { id: "home", title: "home", path: "/" },
-    { id: "docs", title: "docs", path: "/docs/guide/introduction" },
+    {
+      id: "docs",
+      title: "docs",
+      path: "/docs/guide/installation",
+    } /* introduction */,
     { id: "components", title: "components", path: "/docs/components/avatar" },
   ];
 

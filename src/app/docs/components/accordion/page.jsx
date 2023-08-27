@@ -71,10 +71,10 @@ const Accordion = () => {
               <p className="text-2xl font-bold">Demo</p>
               <WindowsComponents col="col">
                 <details
-                  className="group [&_summary::-webkit-details-marker]:hidden transition-all max-w-[500px] min-w-[300px]"
+                  className="group [&_summary::-webkit-details-marker]:hidden transition-all max-w-[500px] min-w-[200px]"
                   open
                 >
-                  <summary className="flex cursor-pointer items-center justify-between border-b gap-1.5 p-4 text-black dark:text-white transition-all">
+                  <summary className="sm:w-[400px] flex cursor-pointer items-center justify-between border-b gap-1.5 p-4 text-black dark:text-white transition-all">
                     <h2 className="font-medium">
                       This is a title of a Accordion.
                     </h2>
@@ -95,7 +95,7 @@ const Accordion = () => {
                     </svg>
                   </summary>
 
-                  <p className="py-5 px-4 leading-relaxed text-black dark:text-white border-b transition-all">
+                  <p className="py-5 px-4 leading-relaxed text-black dark:text-white border-b transition-all sm:w-[400px]">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
                     hic veritatis molestias culpa in, recusandae laboriosam
                     neque aliquid libero nesciunt voluptate dicta quo officiis

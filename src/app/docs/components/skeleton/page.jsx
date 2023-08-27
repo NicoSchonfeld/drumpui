@@ -33,8 +33,8 @@ const Skeleton = () => {
   return (
     <>
       <Navbar />
-      <div className="overflow-hidden bg-white dark:bg-black">
-        <section className="relative container mx-auto w-full flex items-start justify-end mt-20">
+      <div className="overflow-hidden bg-white dark:bg-black h-auto">
+        <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
           {backToTopScroll && (
             <button
               onClick={() => scrollUp()}
@@ -55,18 +55,20 @@ const Skeleton = () => {
             </button>
           )}
 
-          <div className="fixed top-[120px] left-20 lg:left-52">
+          <div className="px-0 xl:px-10">
             <NavbarListPages />
           </div>
 
-          <div className="w-full text-black dark:text-white py-10 sm:px-10 md:px-32 lg:ps-96 px-10">
-            <h3 className="text-4xl font-extrabold mb-5">Skeleton</h3>
+          <div className="w-full text-black dark:text-white py-10 ps-10 xl:ps-52 pe-10">
+            <h3 className="text-4xl font-extrabold mb-5 text-pink-500">
+              Skeleton
+            </h3>
 
             <p className="max-w-3xl mb-20">
               Skeleton is used to display the loading state of some component.
             </p>
 
-            <div className="mt-32">
+            <div>
               <p className="text-2xl font-bold">Demo</p>
 
               <p className="mt-2">You can use it as a standalone component.</p>
@@ -247,7 +249,7 @@ const Skeleton = () => {
               </CodeComponent>
             </div>
 
-            <div className="mt-32">
+            <div className="mt-32 mb-20">
               <p className="text-2xl font-bold">
                 Circle and Text Skeleton variant 2
               </p>
@@ -284,7 +286,7 @@ const Skeleton = () => {
 
             <div className={styled.gridLineCenter}></div>
 
-            <div className="w-full flex items-center justify-between px-5 py-5">
+            <div className="w-full flex items-center justify-between px-5 py-5 mt-10">
               <Link
                 href="/docs/components/modal"
                 rel="noopener noreferrer"

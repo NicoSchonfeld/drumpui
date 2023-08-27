@@ -49,8 +49,11 @@ const Modal = () => {
   return (
     <>
       <Navbar />
-      <div name="modal" className="overflow-hidden bg-white dark:bg-black">
-        <section className="relative container mx-auto w-full flex items-start justify-end mt-20">
+      <div
+        name="modal"
+        className="overflow-hidden bg-white dark:bg-black h-auto"
+      >
+        <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
           {backToTopScroll && (
             <button
               onClick={() => scrollUp()}
@@ -71,14 +74,19 @@ const Modal = () => {
             </button>
           )}
 
-          <div className="fixed top-[120px] left-20 lg:left-52">
+          <div className="px-0 xl:px-10">
             <NavbarListPages />
           </div>
 
-          <div className="w-full text-black dark:text-white py-10 sm:px-10 md:px-32 lg:ps-96 px-10">
-            <h3 className="text-4xl font-extrabold">Animations</h3>
+          <div className="w-full text-black dark:text-white py-10 ps-10 xl:ps-52 pe-10">
+            <h3 className="text-4xl font-extrabold text-pink-500">
+              Animated components
+            </h3>
 
-            <p className="max-w-3xl mb-20">Components animated</p>
+            <p className="max-w-3xl mb-20 mt-5">
+              These components are animated and are created to be used in a
+              modal, a menu, a drawer and more.
+            </p>
 
             <div>
               <p className="text-2xl font-bold mb-5">Modal</p>
@@ -102,13 +110,13 @@ const Modal = () => {
 
                 <AnimatePresence>
                   {openModal && (
-                    <div className="fixed top-0 left-0 bg-black/10 w-full h-[100%] flex items-center justify-center backdrop-blur-sm z-50">
+                    <div className="fixed top-0 left-0 bg-black/10 w-full h-[100%] flex items-center justify-center backdrop-blur-sm z-50 px-10">
                       <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         exit={{ opacity: 0, y: 20 }}
-                        className="bg-white/80 dark:bg-gray-900/90 backdrop-blur-xl w-[50%] h-auto rounded shadow-xl relative"
+                        className="bg-white/80 dark:bg-gray-900/90 backdrop-blur-xl w-full h-auto max-w-[600px] rounded shadow-xl relative"
                       >
                         <div className="flex items-center justify-between p-4">
                           <span className="text-lg font-bold text-gray-800 dark:text-white">
@@ -186,9 +194,9 @@ const Modal = () => {
 
               <WindowsComponents>
                 <div className="relative">
-                  <div className="inline-flex items-center overflow-hidden rounded-md border bg-white">
+                  <div className="inline-flex items-center overflow-hidden rounded-md border dark:border-white/20 bg-white dark:bg-black">
                     <button
-                      className="h-full flex items-center gap-2 p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700"
+                      className="h-full flex items-center gap-2 p-2 text-gray-600 dark:text-gray-100 dark:hover:bg-black hover:bg-gray-50 hover:text-gray-700"
                       onClick={toggleDrop}
                     >
                       <span>Menu</span>
@@ -218,7 +226,7 @@ const Modal = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="absolute z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
+                        className="absolute z-10 mt-2 w-56 rounded-md border border-gray-100 dark:border-white/20 bg-white shadow-lg dark:bg-black"
                         role="menu"
                       >
                         <div className="p-2">
@@ -264,7 +272,7 @@ const Modal = () => {
               <CodeComponent>Code</CodeComponent>
             </div>
 
-            <div className="mt-32">
+            <div className="mt-32 mb-20">
               <p className="text-2xl font-bold mb-5">Drawer</p>
 
               <p className="max-w-3xl mb-5">
@@ -292,28 +300,47 @@ const Modal = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                         exit={{ opacity: 0, x: 100 }}
-                        className="w-[400px] flex h-screen flex-col justify-between border-e bg-white fixed top-0 right-0"
+                        className="w-full md:w-[300px] flex h-screen flex-col justify-between border-e bg-white fixed top-0 right-0"
                       >
                         <div className="px-4 py-6">
                           <div className="w-full flex items-center justify-between">
-                            <span className="grid h-10 w-10 place-content-center rounded-full bg-teal-500 text-xs text-white font-bold">
-                              X
-                            </span>
+                            <span className="grid h-10 w-10 place-content-center rounded-full bg-teal-500 text-xs text-white font-bold"></span>
 
                             <span
                               onClick={toggleDrawer}
                               className="grid h-7 w-7 place-content-center rounded-sm bg-teal-100 text-xs text-teal-900 font-bold cursor-pointer"
                             >
-                              X
+                              <svg
+                                data-testid="geist-icon"
+                                fill="none"
+                                height="24"
+                                shape-rendering="geometricPrecision"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                viewBox="0 0 24 24"
+                                width="24"
+                              >
+                                <path d="M18 6L6 18" />
+                                <path d="M6 6l12 12" />
+                              </svg>
                             </span>
                           </div>
 
-                          <p className="mt-5">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Nulla vitae molestias, nesciunt nemo nam minus
-                            adipisci! Quam itaque dolorum vitae ad, illum,
-                            excepturi enim sunt dolore eaque nam iure fuga.
-                          </p>
+                          <div>
+                            <p className="mt-10 text-black text-2xl font-bold">
+                              Drawer
+                            </p>
+
+                            <p className="mt-5 text-black">
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Nulla vitae molestias, nesciunt
+                              nemo nam minus adipisci! Quam itaque dolorum vitae
+                              ad, illum, excepturi enim sunt dolore eaque nam
+                              iure fuga.
+                            </p>
+                          </div>
                         </div>
                       </motion.div>
                     </div>
@@ -326,7 +353,7 @@ const Modal = () => {
 
             <div className={styled.gridLineCenter}></div>
 
-            <div className="w-full flex items-center justify-between px-5 py-5">
+            <div className="w-full flex items-center justify-between px-5 py-5 mt-10">
               <Link
                 href="/docs/components/input"
                 rel="noopener noreferrer"

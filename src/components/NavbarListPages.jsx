@@ -46,7 +46,7 @@ const NavbarListPages = () => {
 
   return (
     <>
-      <nav className="sr-only lg:not-sr-only">
+      <nav className="sr-only xl:not-sr-only">
         <details
           className="group [&_summary::-webkit-details-marker]:hidden transition-all"
           open

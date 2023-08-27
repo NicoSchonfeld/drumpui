@@ -33,8 +33,8 @@ const Badge = () => {
   return (
     <>
       <Navbar />
-      <div className="overflow-hidden bg-white dark:bg-black">
-        <section className="relative container mx-auto w-full flex items-start justify-end mt-20">
+      <div className="overflow-hidden bg-white dark:bg-black h-auto">
+        <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
           {backToTopScroll && (
             <button
               onClick={() => scrollUp()}
@@ -55,19 +55,21 @@ const Badge = () => {
             </button>
           )}
 
-          <div className="fixed top-[120px] left-20 lg:left-52">
+          <div className="px-0 xl:px-10">
             <NavbarListPages />
           </div>
 
-          <div className="w-full text-black dark:text-white py-10 sm:px-10 md:px-32 lg:ps-96 px-10">
-            <h3 className="text-4xl font-extrabold mb-5">Badge</h3>
+          <div className="w-full text-black dark:text-white py-10 ps-10 xl:ps-52 pe-10">
+            <h3 className="text-4xl font-extrabold mb-5 text-pink-500">
+              Badge
+            </h3>
 
             <p className="max-w-3xl mb-20">
               Badges are used as a small numerical value or status descriptor
               for UI elements.
             </p>
 
-            <div>
+            <div className="mb-20">
               <p className="text-2xl font-bold">Demo</p>
 
               <WindowsComponents>
@@ -202,7 +204,7 @@ const Badge = () => {
 
             <div className={styled.gridLineCenter}></div>
 
-            <div className="w-full flex items-center justify-between px-5 py-5">
+            <div className="w-full flex items-center justify-between px-5 py-5 mt-10">
               <Link
                 href="/docs/components/accordion"
                 rel="noopener noreferrer"

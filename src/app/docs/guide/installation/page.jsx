@@ -34,7 +34,7 @@ const Intallation = () => {
     <>
       <Navbar />
       <div className="overflow-hidden bg-white dark:bg-black h-auto">
-        <section className="relative container mx-auto w-full flex items-start justify-end mt-20">
+        <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
           {backToTopScroll && (
             <button
               onClick={() => scrollUp()}
@@ -55,11 +55,11 @@ const Intallation = () => {
             </button>
           )}
 
-          <div className="fixed top-[120px] left-20 lg:left-52">
+          <div className="px-0 xl:px-10">
             <NavbarListPages />
           </div>
 
-          <div className="w-full text-black dark:text-white py-10 sm:px-10 md:px-32 lg:ps-96 px-10">
+          <div className="w-full text-black dark:text-white py-10 ps-10 xl:ps-52 pe-10">
             <h3 className="text-4xl font-extrabold text-pink-500">
               Documentation
             </h3>
@@ -269,7 +269,7 @@ const Intallation = () => {
               <p className="mt-5">
                 Add the Tailwind directives to your CSS. <br />
                 Add the @tailwind directives for each of Tailwind’s layers to
-                your ./src/index.css file.
+                your ./src/globales.css file.
               </p>
 
               <div className="mt-5">
@@ -357,7 +357,7 @@ const Intallation = () => {
 
             <div className={styled.gridLineCenter}></div>
 
-            <div className="w-full flex items-center justify-end px-5 py-5 mt-5">
+            <div className="w-full flex items-center justify-end px-5 py-5 mt-10">
               {/* <Link
                 href="/docs/guide/introduction"
                 rel="noopener noreferrer"

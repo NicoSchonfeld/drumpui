@@ -33,8 +33,8 @@ const Alert = () => {
   return (
     <>
       <Navbar />
-      <div className="overflow-hidden bg-white dark:bg-black">
-        <section className="relative container mx-auto w-full flex items-start justify-end mt-20">
+      <div className="overflow-hidden bg-white dark:bg-black h-auto">
+        <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
           {backToTopScroll && (
             <button
               onClick={() => scrollUp()}
@@ -55,12 +55,14 @@ const Alert = () => {
             </button>
           )}
 
-          <div className="fixed top-[120px] left-20 lg:left-52">
+          <div className="px-0 xl:px-10">
             <NavbarListPages />
           </div>
 
-          <div className="w-full text-black dark:text-white py-10 sm:px-10 md:px-32 lg:ps-96 px-10">
-            <h3 className="text-4xl font-extrabold mb-5">Alert</h3>
+          <div className="w-full text-black dark:text-white py-10 ps-10 xl:ps-52 pe-10">
+            <h3 className="text-4xl font-extrabold mb-5 text-pink-500">
+              Alert
+            </h3>
 
             <p className="max-w-3xl mb-20">
               Alerts are used to communicate a state that affects a system,
@@ -95,7 +97,7 @@ const Alert = () => {
                     </svg>
                   </span>
 
-                  <p className="text-red-900">
+                  <p className="text-red-900 sm:text-base text-sm">
                     There was an error processing your request
                   </p>
                 </div>
@@ -122,7 +124,7 @@ const Alert = () => {
                     </svg>
                   </span>
 
-                  <p className="text-green-900">
+                  <p className="text-green-900 sm:text-base text-sm">
                     Data uploaded to the server. Fire on!
                   </p>
                 </div>
@@ -154,7 +156,7 @@ const Alert = () => {
                     </svg>
                   </span>
 
-                  <p className="text-green-900">
+                  <p className="text-green-900 sm:text-base text-sm">
                     Seems your account is about expire, upgrade now
                   </p>
                 </div>
@@ -183,8 +185,8 @@ const Alert = () => {
                     </svg>
                   </span>
 
-                  <p className="text-sky-900">
-                    Chakra is going live on August 30th. Get ready!
+                  <p className="text-sky-900 sm:text-base text-sm">
+                    DrumpUI is going live on August 30th. Get ready!
                   </p>
                 </div>
               </WindowsComponents>
@@ -256,7 +258,7 @@ const Alert = () => {
               </CodeComponent>
             </div>
 
-            <div>
+            <div className="mb-20">
               <p className="text-2xl font-bold">Variants</p>
 
               <WindowsComponents col="col">
@@ -284,7 +286,7 @@ const Alert = () => {
                     </svg>
                   </span>
 
-                  <p className="text-white">
+                  <p className="text-white sm:text-base text-sm">
                     There was an error processing your request
                   </p>
                 </div>
@@ -311,7 +313,7 @@ const Alert = () => {
                     </svg>
                   </span>
 
-                  <p className="text-white">
+                  <p className="text-white sm:text-base text-sm">
                     Data uploaded to the server. Fire on!
                   </p>
                 </div>
@@ -343,7 +345,7 @@ const Alert = () => {
                     </svg>
                   </span>
 
-                  <p className="text-white">
+                  <p className="text-white sm:text-base text-sm">
                     Seems your account is about expire, upgrade now
                   </p>
                 </div>
@@ -372,8 +374,8 @@ const Alert = () => {
                     </svg>
                   </span>
 
-                  <p className="text-white">
-                    Chakra is going live on August 30th. Get ready!
+                  <p className="text-white sm:text-base text-sm">
+                    DrumpUI is going live on August 30th. Get ready!
                   </p>
                 </div>
               </WindowsComponents>
@@ -447,7 +449,7 @@ const Alert = () => {
 
             <div className={styled.gridLineCenter}></div>
 
-            <div className="w-full flex items-center justify-between px-5 py-5">
+            <div className="w-full flex items-center justify-between px-5 py-5 mt-10">
               <Link
                 href="/docs/components/avatar"
                 rel="noopener noreferrer"

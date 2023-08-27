@@ -38,8 +38,8 @@ const Button = () => {
   return (
     <>
       <Navbar />
-      <div className="overflow-hidden bg-white dark:bg-black">
-        <section className="relative container mx-auto w-full flex items-start justify-end mt-20">
+      <div className="overflow-hidden bg-white dark:bg-black h-auto">
+        <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
           {backToTopScroll && (
             <button
               onClick={() => scrollUp()}
@@ -60,12 +60,14 @@ const Button = () => {
             </button>
           )}
 
-          <div className="fixed top-[120px] left-20 lg:left-52">
+          <div className="px-0 xl:px-10">
             <NavbarListPages />
           </div>
 
-          <div className="w-full text-black dark:text-white py-10 sm:px-10 md:px-32 lg:ps-96 px-10">
-            <h3 className="text-4xl font-extrabold mb-5">Button</h3>
+          <div className="w-full text-black dark:text-white py-10 ps-10 xl:ps-52 pe-10">
+            <h3 className="text-4xl font-extrabold mb-5 text-pink-500">
+              Button
+            </h3>
             <p className="max-w-3xl mb-20">
               Button component is used to trigger an action or event, such as
               submitting a form, opening a Dialog, canceling an action, or
@@ -497,6 +499,23 @@ const Button = () => {
                 </button>
               </WindowsComponents>
 
+              <p className="my-5">
+                The icons that you see in these buttons are used from
+                React-Icons. <br />
+                You can copy this command and place it on your terminal to
+                install the icons. <br />
+                We also leave you their documentation{" "}
+                <a
+                  href="https://react-icons.github.io/react-icons"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-500 hover:text-pink-700 transition-all"
+                >
+                  React-icons
+                </a>
+                .
+              </p>
+
               <CodeComponent>
                 <pre>
                   <code className="text-white">
@@ -507,6 +526,12 @@ const Button = () => {
 
               <br />
               <br />
+
+              <p className="my-5">
+                Once installed we have to import them into our file from
+                <code> react-icons/(icon name)</code> <br />
+                and we can call them as a component to start using them.
+              </p>
 
               <CodeComponent>
                 <pre lenguage="language-jsx" className="mt-10">
@@ -819,6 +844,23 @@ const Button = () => {
                 </button>
               </WindowsComponents>
 
+              <p className="my-5">
+                The icons that you see in these buttons are used from
+                React-Icons. <br />
+                You can copy this command and place it on your terminal to
+                install the icons. <br />
+                We also leave you their documentation{" "}
+                <a
+                  href="https://react-icons.github.io/react-icons"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-500 hover:text-pink-700 transition-all"
+                >
+                  React-icons
+                </a>
+                .
+              </p>
+
               <CodeComponent>
                 <pre>
                   <code className="text-white">
@@ -828,7 +870,12 @@ const Button = () => {
               </CodeComponent>
 
               <br />
-              <br />
+
+              <p className="my-5">
+                Once installed we have to import them into our file from
+                <code> react-icons/(icon name)</code> <br />
+                and we can call them as a component to start using them.
+              </p>
 
               <CodeComponent>
                 <pre lenguage="language-jsx" className="mt-10">
@@ -1134,7 +1181,7 @@ const Button = () => {
               </CodeComponent>
             </div>
 
-            <div className="mt-32">
+            <div className="mt-32 mb-20">
               <p className="text-2xl font-bold">Button group</p>
 
               <WindowsComponents>
@@ -1296,8 +1343,10 @@ const Button = () => {
                 </pre>
               </CodeComponent>
             </div>
+
             <div className={styled.gridLineCenter}></div>
-            <div className="w-full flex items-center justify-between px-5 py-5">
+
+            <div className="w-full flex items-center justify-between px-5 py-5 mt-10">
               <Link
                 href="/docs/components/badge"
                 rel="noopener noreferrer"

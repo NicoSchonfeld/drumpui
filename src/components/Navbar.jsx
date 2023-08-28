@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
-import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+import { BsFillSunFill, BsFillMoonFill, BsLink45Deg } from "react-icons/bs";
 import { BiMenuAltRight } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
@@ -35,14 +35,26 @@ const Navbar = () => {
     setOpenDropdown(!openDropdown);
   };
 
-  const listNavbarHeaderPage = [
-    { id: "home", title: "home", path: "/" },
+  const listSearchComponents = [
     {
-      id: "docs",
-      title: "docs",
+      id: "installation",
+      title: "Installation",
       path: "/docs/guide/installation",
-    } /* introduction */,
-    { id: "components", title: "components", path: "/docs/components/avatar" },
+    },
+    { id: "avatar", title: "Avatar", path: "/docs/components/avatar" },
+    { id: "alert", title: "Alert", path: "/docs/components/alert" },
+    { id: "accordion", title: "Accordion", path: "/docs/components/accordion" },
+    { id: "badge", title: "Badge", path: "/docs/components/badge" },
+    { id: "button", title: "Button", path: "/docs/components/button" },
+    { id: "card", title: "Card", path: "/docs/components/card" },
+    { id: "input", title: "Input", path: "/docs/components/input" },
+    { id: "modal", title: "Modal", path: "/docs/components/modal" },
+    { id: "skeleton", title: "Skeleton", path: "/docs/components/skeleton" },
+    {
+      id: "breadcrumb",
+      title: "Breadcrumb",
+      path: "/docs/components/breadcrumb",
+    },
   ];
 
   const toggleThemeLight = () => {
@@ -52,6 +64,18 @@ const Navbar = () => {
   const toggleThemeDark = () => {
     setTheme("dark");
   };
+
+  const [listComponents, setListComponents] = useState(listSearchComponents);
+  const [keyword, setKeyword] = useState("");
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setKeyword(value);
+  };
+
+  let newResult = listComponents.filter((el) =>
+    el.title.toLowerCase().includes(keyword.toLowerCase())
+  );
 
   return (
     <>
@@ -64,14 +88,12 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 exit={{ opacity: 0, y: 20 }}
-                className="bg-white/80 dark:bg-gray-900/90 backdrop-blur-xl w-full h-auto max-w-[600px] rounded shadow-xl relative"
+                className="bg-white dark:bg-gray-900 backdrop-blur-xl w-auto h-auto max-w-[600px] rounded shadow-xl relative flex flex-col p-2"
               >
-                <span
-                  className="cursor-pointer"
-                  onClick={() => setOpenModalSeach(false)}
-                >
+                <div className="relative w-[600px] h-auto px-2 py-5">
                   <svg
-                    className="transition-all hover:bg-gray-200 dark:hover:bg-gray-900 dark:text-white rounded"
+                    onClick={() => setOpenModalSeach(false)}
+                    className="text-gray-600 dark:text-gray-100 cursor-pointer absolute top-2 right-5"
                     data-testid="geist-icon"
                     fill="none"
                     height="24"
@@ -86,7 +108,42 @@ const Navbar = () => {
                     <path d="M18 6L6 18" />
                     <path d="M6 6l12 12" />
                   </svg>
-                </span>
+
+                  <FaSearch className="text-md absolute top-[31px] left-10 dark:text-gray-100 text-gray-600" />
+                  <input
+                    type="text"
+                    placeholder="Search the docs"
+                    className="w-full py-2 px-20 focus:outline-none bg-transparent text-gray-600 dark:text-gray-100"
+                    autoFocus
+                    value={keyword}
+                    onChange={handleChange}
+                  />
+                </div>
+
+                {!keyword ? null : (
+                  <>
+                    <hr />
+
+                    <div className="py-5 px-2 w-full">
+                      <ul className="flex flex-col items-start gap-3">
+                        {newResult?.map((dato) => (
+                          <li
+                            key={dato.id}
+                            className="w-full flex items-center justify-between py-4 px-5 rounded-md border font-bold text-gray-800 hover:text-gray-100 hover:underline bg-pink-100 hover:bg-pink-500"
+                          >
+                            <Link
+                              href={dato.path}
+                              onClick={() => setOpenModalSeach(false)}
+                            >
+                              {dato.title}
+                            </Link>
+                            <BsLink45Deg className="text-bold text-2xl" />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                )}
               </motion.div>
             </div>
           )}

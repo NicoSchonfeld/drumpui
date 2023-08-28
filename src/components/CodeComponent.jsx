@@ -3,7 +3,7 @@ import React from "react";
 const CodeComponent = ({ children, code = "React.js" }) => {
   return (
     <>
-      <div className="w-auto max-w-[800px] h-auto relative overflow-hidden pt-10 pb-3 px-5 font-medium text-[10px] md:text-[16px] sm:text-[12px] bg-gray-800 dark:bg-gray-800/50 border border-white/20 rounded-lg shadow-md">
+      <div className="w-auto max-w-[800px] h-auto relative overflow-x-auto pt-10 pb-3 px-5 font-medium text-[10px] md:text-[16px] sm:text-[12px] bg-gray-800 dark:bg-gray-800/50 border border-white/20 rounded-lg shadow-md">
         <div className="absolute top-3 left-4 flex items-center gap-1">
           <div className="w-[13px] h-[13px] bg-red-500 rounded-full"></div>
           <div className="w-[13px] h-[13px] bg-yellow-500 rounded-full"></div>

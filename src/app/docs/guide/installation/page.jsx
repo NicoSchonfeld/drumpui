@@ -137,7 +137,7 @@ const Intallation = () => {
               <p className="my-5">
                 It is important that in this option{" "}
                 <span className="inline-flex items-center justify-center rounded-sm bg-pink-100 px-2.5 py-0.5 text-pink-700">
-                  <code className="whitespace-nowrap text-sm">
+                  <code className="whitespace-nowrap text-[12px]">
                     Would you liketo use TypeScript? No /{" "}
                     <span className="font-bold">Yes</span>
                   </code>

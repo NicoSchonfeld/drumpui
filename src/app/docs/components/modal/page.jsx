@@ -10,8 +10,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import styled from "@/styles/lineGradiant.module.css";
 import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
+import { useTheme } from "next-themes";
 
 const Modal = () => {
+  const { theme, setTheme } = useTheme();
   const [openModal, setOpenModal] = useState(false);
   const toggleModal = () => {
     setOpenModal(!openModal);
@@ -47,7 +49,7 @@ const Modal = () => {
   };
 
   return (
-    <>
+    <div className={theme}>
       <Navbar />
       <div
         name="modal"
@@ -405,7 +407,7 @@ const Modal = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -10,7 +10,11 @@ import Link from "next/link";
 import styled from "@/styles/lineGradiant.module.css";
 import CodeComponent from "@/components/CodeComponent";
 
+import { useTheme } from "next-themes";
+
 const Intallation = () => {
+  const { theme, setTheme } = useTheme();
+
   const [backToTopScroll, setBackToTopScroll] = useState(false);
 
   useEffect(() => {
@@ -31,7 +35,7 @@ const Intallation = () => {
   };
 
   return (
-    <>
+    <div className={theme}>
       <Navbar />
       <div className="overflow-hidden bg-white dark:bg-black h-auto">
         <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
@@ -408,7 +412,7 @@ const Intallation = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

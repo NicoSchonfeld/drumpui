@@ -9,8 +9,10 @@ import styled from "@/styles/lineGradiant.module.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import { useTheme } from "next-themes";
+
 const App = () => {
-  const getModeThemePage = localStorage.getItem("theme");
+  const { theme, setTheme } = useTheme();
 
   const ref = useRef(null);
 
@@ -44,7 +46,7 @@ const App = () => {
   };
 
   return (
-    <div className={getModeThemePage}>
+    <div className={theme}>
       <Navbar />
       <div
         className="relative overflow-hidden bg-white dark:bg-black"
@@ -70,7 +72,7 @@ const App = () => {
           </button>
         )}
 
-        <HomePage getModeThemePage={getModeThemePage} />
+        <HomePage theme={theme} />
 
         <SectionTwoHome refScroll={ref} />
 

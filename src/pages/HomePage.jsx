@@ -11,11 +11,11 @@ import boxGradientTop from "@/assets/boxGradientTop.png";
 import boxGradientTopWhite from "@/assets/boxGradientTopWhite.png";
 import Link from "next/link";
 
-const HomePage = ({ getModeThemePage }) => {
+const HomePage = ({ theme }) => {
   return (
     <>
       <main className="h-auto relative overflow-hidden pb-56">
-        {getModeThemePage === "dark" ? (
+        {theme === "dark" ? (
           <Image
             src={boxGradientTop}
             alt="boxGradientTop"
@@ -69,8 +69,8 @@ const HomePage = ({ getModeThemePage }) => {
                 transition={{ duration: 0.5 }}
               >
                 <LogoIcon
-                  color={getModeThemePage === "dark" ? "white" : "black"}
-                  ui={getModeThemePage === "dark" ? "#EC4899" : "white"}
+                  color={theme === "dark" ? "white" : "black"}
+                  ui={theme === "dark" ? "#EC4899" : "white"}
                   w={150}
                   h={50}
                 />

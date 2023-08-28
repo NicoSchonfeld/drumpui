@@ -9,8 +9,10 @@ import Link from "next/link";
 import styled from "@/styles/lineGradiant.module.css";
 import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
+import { useTheme } from "next-themes";
 
 const Alert = () => {
+  const { theme, setTheme } = useTheme();
   const [backToTopScroll, setBackToTopScroll] = useState(false);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const Alert = () => {
   };
 
   return (
-    <>
+    <div className={theme}>
       <Navbar />
       <div className="overflow-hidden bg-white dark:bg-black h-auto">
         <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
@@ -501,7 +503,7 @@ const Alert = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

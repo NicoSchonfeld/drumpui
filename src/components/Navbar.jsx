@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import LogoIcon from "./LogoIcon";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -11,7 +12,7 @@ import { FaSearch } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
-  const getModeThemePage = localStorage.getItem("theme");
+  const { theme, setTheme } = useTheme();
 
   const [openModalSeach, setOpenModalSeach] = useState(false);
   const map = new Map();
@@ -43,13 +44,11 @@ const Navbar = () => {
   ];
 
   const toggleThemeLight = () => {
-    localStorage.setItem("theme", "light");
-    location.reload("/");
+    setTheme("light");
   };
 
   const toggleThemeDark = () => {
-    localStorage.setItem("theme", "dark");
-    location.reload("/");
+    setTheme("dark");
   };
 
   return (
@@ -94,8 +93,8 @@ const Navbar = () => {
         <nav className="container mx-auto flex items-center justify-between px-10">
           <Link href="/" rel="noopener noreferrer">
             <LogoIcon
-              color={getModeThemePage === "dark" ? "white" : "black"}
-              ui={getModeThemePage === "dark" ? "#EC4899" : "white"}
+              color={theme === "dark" ? "white" : "black"}
+              ui={theme === "dark" ? "#EC4899" : "white"}
               w={140}
             />
           </Link>
@@ -204,7 +203,7 @@ const Navbar = () => {
 
           <ul className="xl:sr-only not-sr-only">
             <li>
-              {getModeThemePage === "dark" ? (
+              {theme === "dark" ? (
                 <button className="text-white text-2xl">
                   <BiMenuAltRight />
                 </button>

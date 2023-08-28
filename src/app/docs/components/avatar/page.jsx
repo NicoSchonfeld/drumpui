@@ -12,8 +12,10 @@ import Image from "next/image";
 
 import photoUserProfile from "@/assets/photoUserProfile.jpg";
 import CodeComponent from "@/components/CodeComponent";
+import { useTheme } from "next-themes";
 
 const Avatar = () => {
+  const { theme, setTheme } = useTheme();
   const [backToTopScroll, setBackToTopScroll] = useState(false);
 
   useEffect(() => {
@@ -34,7 +36,7 @@ const Avatar = () => {
   };
 
   return (
-    <>
+    <div className={theme}>
       <Navbar />
       <div className="overflow-hidden bg-white dark:bg-black h-auto">
         <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
@@ -250,7 +252,7 @@ const Avatar = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

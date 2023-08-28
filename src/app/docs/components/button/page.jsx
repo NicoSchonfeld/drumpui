@@ -14,8 +14,10 @@ import { ImSpinner8, ImSpinner2 } from "react-icons/im";
 import { FaSpinner } from "react-icons/fa";
 import { CgSpinnerTwoAlt } from "react-icons/cg";
 import CodeComponent from "@/components/CodeComponent";
+import { useTheme } from "next-themes";
 
 const Button = () => {
+  const { theme, setTheme } = useTheme();
   const [backToTopScroll, setBackToTopScroll] = useState(false);
 
   useEffect(() => {
@@ -36,7 +38,7 @@ const Button = () => {
   };
 
   return (
-    <>
+    <div className={theme}>
       <Navbar />
       <div className="overflow-hidden bg-white dark:bg-black h-auto">
         <section className="relative container mx-auto w-full mt-20 flex items-start justify-start">
@@ -1398,7 +1400,7 @@ const Button = () => {
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

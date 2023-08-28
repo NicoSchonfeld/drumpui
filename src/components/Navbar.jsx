@@ -23,8 +23,10 @@ const Navbar = () => {
     }
   };
 
-  window.addEventListener(`keydown`, leerEntradas);
-  window.addEventListener(`keyup`, leerEntradas);
+  if (typeof window !== "undefined") {
+    window.addEventListener(`keydown`, leerEntradas);
+    window.addEventListener(`keyup`, leerEntradas);
+  }
 
   const pathname = useParams();
 

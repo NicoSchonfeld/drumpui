@@ -129,7 +129,7 @@ const Navbar = () => {
                         {newResult?.map((dato) => (
                           <li
                             key={dato.id}
-                            className="w-full flex items-center justify-between py-4 px-5 rounded-md border font-bold text-gray-800 hover:text-gray-100 hover:underline bg-pink-100 hover:bg-pink-500"
+                            className="w-full flex items-center justify-between py-4 px-5 rounded-md border font-bold text-gray-800 hover:text-gray-100 hover:underline dark:bg-pink-100/20 dark:border-white/20 dark:text-gray-100 bg-pink-100 hover:bg-pink-500 dark:hover:bg-pink-500"
                           >
                             <Link
                               href={dato.path}
@@ -153,6 +153,7 @@ const Navbar = () => {
           <Link href="/" rel="noopener noreferrer">
             <LogoIcon
               color={theme === "dark" ? "white" : "black"}
+              colorUI={theme === "dark" ? "white" : "#EC4899"}
               ui={theme === "dark" ? "#EC4899" : "white"}
               w={140}
             />

@@ -1,15 +1,22 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider, useTheme } from "next-themes";
+import React, { useEffect } from "react";
 
 const ProviderTheme = ({ children }) => {
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme("dark");
+  }, []);
+
   return (
-    <>
-      <ThemeProvider>{children}</ThemeProvider>
-      {/* <div className="w-full h-screen flex items-center justify-center text-6xl font-bold">
+    <div className={theme}>
+      {/* <ThemeProvider>{children}</ThemeProvider> */}
+      <div className="w-full h-screen flex items-center justify-center text-6xl font-bold text-gray-600 dark:text-gray-100">
         Maintenance
-      </div> */}
-    </>
+      </div>
+    </div>
   );
 };
 

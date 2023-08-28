@@ -61,8 +61,8 @@ const HomePage = ({ theme }) => {
         ></motion.div>
 
         <div className="container mx-auto w-full h-full flex flex-col items-center justify-center">
-          <div className="flex items-center flex-col mt-[300px]">
-            <div className="overflow-hidden">
+          <div className="flex items-center flex-col mt-[150px] sm:mt-[250px]">
+            <div className="overflow-hidden sr-only">
               <motion.div
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -88,23 +88,23 @@ const HomePage = ({ theme }) => {
 
             <div className="overflow-hidden bg-white dark:bg-black py-2 px-10 z-10">
               <motion.h1
-                initial={{ opacity: 1, y: 100 }}
+                initial={{ opacity: 1, y: 500 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-5xl md:text-7xl font-extrabold max-w-5xl text-center"
+                className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-4xl md:text-7xl font-extrabold max-w-6xl text-center"
               >
-                Plantillas listas para crear tu
+                Build your website with
               </motion.h1>
             </div>
 
             <div className="overflow-hidden bg-white dark:bg-black py-2 z-10">
               <motion.h2
-                initial={{ opacity: 1, y: 100 }}
+                initial={{ opacity: 1, y: 500 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-5xl md:text-7xl font-extrabold max-w-5xl text-center"
+                className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-4xl md:text-7xl font-extrabold max-w-6xl text-center"
               >
-                web mucho más rapido.
+                Free Tailwind CSS components
               </motion.h2>
             </div>
 
@@ -124,7 +124,7 @@ const HomePage = ({ theme }) => {
                 transition={{ duration: 0.5 }}
                 className="text-black/50 dark:text-white/50 text-center"
               >
-                Components created on top of Tailwind CSS
+                Search, copy, paste and ready to use to your liking
               </motion.p>
             </div>
 

@@ -10,7 +10,7 @@ import pepe from "@/assets/pepe.png";
 const SectionTwoHome = ({ refScroll }) => {
   const { scrollYProgress } = useScroll({
     target: refScroll,
-    offset: ["0 1", "1 1.8"],
+    offset: ["0 1", "1 2"],
   });
 
   return (
@@ -25,6 +25,14 @@ const SectionTwoHome = ({ refScroll }) => {
               zIndex: 1,
             }}
           >
+            <motion.div
+              className="w-full pb-10 flex items-center justify-center"
+              style={{ opacity: scrollYProgress }}
+            >
+              <p className="font-bold text-3xl text-center">
+                Modify the styles to your liking!
+              </p>
+            </motion.div>
             <Image
               className="rounded-lg md:w-[1000px] w-96"
               src={pepe}

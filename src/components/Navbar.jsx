@@ -13,6 +13,18 @@ import { AnimatePresence, motion } from "framer-motion";
 const Navbar = () => {
   const getModeThemePage = localStorage.getItem("theme");
 
+  const [openModalSeach, setOpenModalSeach] = useState(false);
+  const map = new Map();
+  const leerEntradas = (e) => {
+    map.set(e.key, e.type == "keydown");
+    if (map.get("Control") && map.get("c")) {
+      setOpenModalSeach(!openModalSeach);
+    }
+  };
+
+  window.addEventListener(`keydown`, leerEntradas);
+  window.addEventListener(`keyup`, leerEntradas);
+
   const pathname = useParams();
 
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -43,6 +55,42 @@ const Navbar = () => {
   return (
     <>
       <header className="fixed top-0 left-0 backdrop-blur-md w-full bg-white/80 dark:bg-black/50 py-3 z-20">
+        <AnimatePresence>
+          {openModalSeach && (
+            <div className="fixed top-0 left-0 bg-black/80 w-full h-screen flex items-start justify-center backdrop-blur-sm z-50 px-10 py-40">
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                exit={{ opacity: 0, y: 20 }}
+                className="bg-white/80 dark:bg-gray-900/90 backdrop-blur-xl w-full h-auto max-w-[600px] rounded shadow-xl relative"
+              >
+                <span
+                  className="cursor-pointer"
+                  onClick={() => setOpenModalSeach(false)}
+                >
+                  <svg
+                    className="transition-all hover:bg-gray-200 dark:hover:bg-gray-900 dark:text-white rounded"
+                    data-testid="geist-icon"
+                    fill="none"
+                    height="24"
+                    shape-rendering="geometricPrecision"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <path d="M18 6L6 18" />
+                    <path d="M6 6l12 12" />
+                  </svg>
+                </span>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
+
         <nav className="container mx-auto flex items-center justify-between px-10">
           <Link href="/" rel="noopener noreferrer">
             <LogoIcon
@@ -52,7 +100,10 @@ const Navbar = () => {
             />
           </Link>
 
-          <div className="sr-only xl:not-sr-only w-auto">
+          <div
+            className="sr-only xl:not-sr-only w-auto"
+            onClick={() => setOpenModalSeach(true)}
+          >
             <div className="flex items-center justify-between bg-transparent w-[500px] px-5 py-2 rounded-md text-gray-600 dark:text-gray-400 border dark:border-white/20 shadow-sm cursor-text">
               <div className="flex items-center gap-2">
                 <FaSearch className="text-sm" /> Search the docs
@@ -65,7 +116,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="relative text-sm text-gray-600 bg-gray-200 rounded-md overflow-hidden">
-                  <code className="px-1">K</code>
+                  <code className="px-1">C</code>
                   <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-400"></div>
                 </div>
               </div>

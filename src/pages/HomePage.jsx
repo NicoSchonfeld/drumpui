@@ -14,7 +14,7 @@ import Link from "next/link";
 const HomePage = ({ theme }) => {
   return (
     <>
-      <main className="h-auto relative overflow-hidden pb-56">
+      <main className="h-screen relative overflow-hidden pb-56">
         {theme === "dark" ? (
           <Image
             src={boxGradientTop}

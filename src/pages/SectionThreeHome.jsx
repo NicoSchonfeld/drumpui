@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   useMotionTemplate,
@@ -12,7 +12,7 @@ import styled from "@/styles/lineGradiant.module.css";
 const SectionThreeHome = ({ refScroll }) => {
   const { scrollYProgress } = useScroll({
     target: refScroll,
-    offset: ["0 1", "1 1"],
+    offset: ["0 1", "1.5 3"],
   });
 
   let mouseX = useMotionValue(0);
@@ -25,12 +25,20 @@ const SectionThreeHome = ({ refScroll }) => {
     mouseY.set(clientY - top);
   }
 
+  const [widthPage, setWidthPage] = useState(1300);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWidthPage(window.innerWidth);
+    }
+  }, []);
+
   return (
-    <section className="relative w-full h-auto md:h-screen overflow-hidden flex flex-col items-center justify-center gap-10 py-40">
+    <section className="relative w-full h-screen md:h-auto overflow-hidden flex flex-col items-center justify-center gap-10 py-40">
       <motion.div
         style={{
-          scale: scrollYProgress,
-          opacity: scrollYProgress,
+          scale: widthPage > 1300 ? scrollYProgress : null,
+          opacity: widthPage > 1300 ? scrollYProgress : null,
           zIndex: 1,
         }}
         className="space-y-10"

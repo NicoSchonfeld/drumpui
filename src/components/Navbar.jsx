@@ -226,7 +226,10 @@ const Navbar = () => {
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.3, delay: 0.2 }}
                           className="w-full flex items-center gap-2 rounded-lg px-4 py-2 text-sm text-gray-500 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-500/50 hover:text-gray-700"
-                          onClick={toggleThemeLight}
+                          onClick={() => {
+                            toggleThemeLight();
+                            toggleDrop();
+                          }}
                         >
                           <BsFillSunFill /> Light
                         </motion.button>
@@ -236,7 +239,10 @@ const Navbar = () => {
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.3, delay: 0.3 }}
                           className="w-full flex items-center gap-2 rounded-lg px-4 py-2 text-sm text-gray-500 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-500/50 hover:text-gray-700"
-                          onClick={toggleThemeDark}
+                          onClick={() => {
+                            toggleThemeDark();
+                            toggleDrop();
+                          }}
                         >
                           <BsFillMoonFill /> Dark
                         </motion.button>

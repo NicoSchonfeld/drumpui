@@ -6,7 +6,12 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
-import { BsFillSunFill, BsFillMoonFill, BsLink45Deg } from "react-icons/bs";
+import {
+  BsFillSunFill,
+  BsFillMoonFill,
+  BsLink45Deg,
+  BsGithub,
+} from "react-icons/bs";
 import { BiMenuAltRight } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
@@ -79,7 +84,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 backdrop-blur-md w-full bg-white/80 dark:bg-black/50 py-3 z-20">
+      <header className="fixed top-0 left-0 backdrop-blur-md w-full bg-transparent dark:bg-transparent py-3 z-20">
         <AnimatePresence>
           {openModalSeach && (
             <div className="fixed top-0 left-0 bg-black/80 w-full h-screen flex items-start justify-center backdrop-blur-sm z-50 px-10 py-40">
@@ -183,6 +188,43 @@ const Navbar = () => {
           </div>
 
           <ul className="flex items-center space-x-5 sr-only xl:not-sr-only">
+            <li>
+              <a
+                className="text-gray-400 hover:text-gray-500 transition-all"
+                href="https://github.com/NicoSchonfeld/drumpui"
+                target="_blank"
+              >
+                <BsGithub />
+              </a>
+            </li>
+
+            <li>
+              <a
+                className="text-gray-400 hover:text-gray-500 transition-all"
+                href="https://twitter.com/NicoSchonfeld__"
+                target="_blank"
+              >
+                <svg
+                  data-testid="geist-icon"
+                  fill="none"
+                  height="15"
+                  shape-rendering="geometricPrecision"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  width="15"
+                >
+                  <path
+                    fill="var(--geist-fill, currentColor)"
+                    stroke="none"
+                    d="M16.99 0H20.298L13.071 8.26L21.573 19.5H14.916L9.702 12.683L3.736 19.5H0.426L8.156 10.665L0 0H6.826L11.539 6.231L16.99 0ZM15.829 17.52H17.662L5.83 1.876H3.863L15.829 17.52Z"
+                  />
+                </svg>
+              </a>
+            </li>
+
             <li>
               <div className="relative">
                 <div className="inline-flex items-center overflow-hidden">

@@ -34,7 +34,7 @@ const SectionThreeHome = ({ refScroll }) => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen md:h-auto overflow-hidden flex flex-col items-center justify-center gap-10 py-40">
+    <section className="relative w-full h-auto overflow-hidden flex flex-col items-center justify-center gap-10 py-40">
       <motion.div
         style={{
           scale: widthPage > 1300 ? scrollYProgress : null,

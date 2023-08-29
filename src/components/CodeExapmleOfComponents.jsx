@@ -1,3 +1,39 @@
+/* HomePageCodeDemoSectionTwo */
+
+export const codeDemoSectionTwo = `import React from 'react'
+
+const ShopCard = () => {
+  return (
+    <div className="w-[200px] md:w-[400px] bg-white dark:bg-gray-900 rounded-lg p-4 shadow-sm shadow-indigo-100 dark:shadow-black/50">
+        <img
+          alt="photo-1434389677669"
+          src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
+          className="h-56 w-full object-cover rounded-md"
+        />
+
+        <div className="mt-2">
+          <dl>
+            <div>
+                <dd className="text-sm text-gray-500">$15.000</dd>
+            </div>
+
+            <div>
+              <dd className="font-medium">Chaqueta Bomber</dd>
+            </div>
+          </dl>
+
+          <div className="mt-6 w-full">
+            <button className="w-full transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
+                Buy
+            </button>
+          </div>
+         </div>
+      </div>
+  )
+}
+
+export default ShopCard`;
+
 /* Installation */
 
 export const installTwWhithNextJS = `> npx create-next-app@latest`;
@@ -712,87 +748,80 @@ const toggleModal = () => {
   setOpenModal(!openModal);
 };
 
-<button
-onClick={toggleModal}
-className="transition rounded border border-pink-600 
-bg-pink-600 px-4 py-2 text-sm font-medium text-white
-hover:bg-pink-700 hover:border-pink-700 
-hover:text-white focus:outline-none"
->
-Open Modal
-</button>
+<div className="relative">
+<div className="inline-flex items-center overflow-hidden rounded-md border dark:border-white/20 bg-white dark:bg-black">
+  <button
+    className="h-full flex items-center gap-2 p-2 text-gray-600 dark:text-gray-100 dark:hover:bg-black hover:bg-gray-50 hover:text-gray-700"
+    onClick={toggleDrop}
+  >
+    <span>Menu</span>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={
+        openDropdown
+          ? 'h-5 w-5 rotate-180 transition-all'
+          : "h-5 w-5 transition-all"
+      }
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        clipRule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
 
 <AnimatePresence>
-{openModal && (
-  <div className="fixed top-0 left-0 bg-black/10 w-full h-[100%] flex items-center justify-center backdrop-blur-sm z-50 px-10">
+  {openDropdown && (
     <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      exit={{ opacity: 0, y: 20 }}
-      className="bg-white/80 dark:bg-gray-900/90 backdrop-blur-xl w-full h-auto max-w-[600px] rounded shadow-xl relative"
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      className="absolute z-10 mt-2 w-56 rounded-md border border-gray-100 dark:border-white/20 bg-white shadow-lg dark:bg-black"
+      role="menu"
     >
-      <div className="flex items-center justify-between p-4">
-        <span className="text-lg font-bold text-gray-800 dark:text-white">
-          Lorem, ipsum dolor.
-        </span>
-        <span
-          className="cursor-pointer"
-          onClick={toggleModal}
+      <div className="p-2">
+        <motion.a
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+          href="#"
+          className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+          role="menuitem"
         >
-          <svg
-            className="transition hover:bg-gray-200 dark:hover:bg-gray-900 rounded"
-            data-testid="geist-icon"
-            fill="none"
-            height="24"
-            shape-rendering="geometricPrecision"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path d="M18 6L6 18" />
-            <path d="M6 6l12 12" />
-          </svg>
-        </span>
-      </div>
+          Profile
+        </motion.a>
 
-      <hr />
-
-      <div className="px-4 py-5 space-y-3">
-        <p className="text-gray-800 dark:text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Dolorum, molestiae. Totam excepturi laboriosam
-          necessitatibus consequatur voluptas pariatur,
-          asperiores nemo dolorem?
-        </p>
-
-        <p className="text-gray-800 dark:text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Minus, nostrum.
-        </p>
-      </div>
-
-      <hr />
-
-      <div className="py-3 px-4 w-full h-full flex items-center justify-end space-x-4">
-        <button className="transition rounded border border-red-600  px-4 py-2 text-sm font-medium text-red-700 hover:bg-red-600 hover:text-white focus:outline-none focus:ring active:text-white">
-          Close
-        </button>
-
-        <button
-          onClick={toggleModal}
-          className="transition rounded border border-green-600 bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 hover:border-green-700 hover:text-white focus:outline-none focus:ring active:text-white"
+        <motion.a
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+          href="#"
+          className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+          role="menuitem"
         >
-          Accept
-        </button>
+          Edit
+        </motion.a>
+
+        <motion.a
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.4 }}
+          href="#"
+          className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+          role="menuitem"
+        >
+          Settings
+        </motion.a>
       </div>
     </motion.div>
-  </div>
-)}
-</AnimatePresence>`;
+  )}
+</AnimatePresence>
+</div>`;
 
 export const codeMenu = `const [openDropdown, setOpenDropdown] = useState(false);
 const toggleDrop = () => {
@@ -893,11 +922,11 @@ Open Drawer
 {openDrawer && (
   <div className="fixed top-0 left-0 bg-gray-900/50 w-full h-[100%] flex items-center justify-center backdrop-blur-sm z-50">
     <motion.div
-      initial={{ opacity: 0, x: 100 }}
+      initial={{ opacity: 1, x: 500 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      exit={{ opacity: 0, x: 100 }}
-      className="w-full md:w-[300px] flex h-screen flex-col justify-between border-e bg-white fixed top-0 right-0"
+      exit={{ opacity: 1, x: 500 }}
+      className="w-full md:w-[400px] flex h-screen flex-col justify-between border-e bg-white fixed top-0 right-0"
     >
       <div className="px-4 py-6">
         <div className="w-full flex items-center justify-between">

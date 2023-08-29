@@ -19,6 +19,7 @@ import {
 
 const Modal = () => {
   const { theme, setTheme } = useTheme();
+
   const [openModal, setOpenModal] = useState(false);
   const toggleModal = () => {
     setOpenModal(!openModal);
@@ -245,7 +246,7 @@ const Modal = () => {
                             className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                             role="menuitem"
                           >
-                            View on Storefront
+                            Profile
                           </motion.a>
 
                           <motion.a
@@ -256,7 +257,7 @@ const Modal = () => {
                             className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                             role="menuitem"
                           >
-                            View Warehouse Info
+                            Edit
                           </motion.a>
 
                           <motion.a
@@ -267,7 +268,7 @@ const Modal = () => {
                             className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                             role="menuitem"
                           >
-                            Duplicate Product
+                            Settings
                           </motion.a>
                         </div>
                       </motion.div>
@@ -303,11 +304,11 @@ const Modal = () => {
                   {openDrawer && (
                     <div className="fixed top-0 left-0 bg-gray-900/50 w-full h-[100%] flex items-center justify-center backdrop-blur-sm z-50">
                       <motion.div
-                        initial={{ opacity: 0, x: 100 }}
+                        initial={{ opacity: 1, x: 500 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
-                        exit={{ opacity: 0, x: 100 }}
-                        className="w-full md:w-[300px] flex h-screen flex-col justify-between border-e bg-white fixed top-0 right-0"
+                        exit={{ opacity: 1, x: 500 }}
+                        className="w-full md:w-[400px] flex h-screen flex-col justify-between border-e bg-white fixed top-0 right-0"
                       >
                         <div className="px-4 py-6">
                           <div className="w-full flex items-center justify-between">

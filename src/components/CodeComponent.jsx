@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import useSound from "use-sound";
 
-const CodeComponent = ({ children, code = "React.js", copyCode }) => {
+const CodeComponent = ({ children, code = "Next.js", copyCode }) => {
   const [copy, setCopy] = useState(false);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const CodeComponent = ({ children, code = "React.js", copyCode }) => {
             animate={{ opacity: 1, y: -20 }}
             exit={{ opacity: 0, y: 100 }}
             role="alert"
-            className="bg-green-200 rounded-md flex items-center gap-3 p-3 md:w-[500px] w-96 fixed bottom-0 md:right-5 right-2 z-50"
+            className="bg-green-200 rounded-md flex items-center gap-3 p-3 md:w-[500px] fixed bottom-0 right-5 z-50"
           >
             <span>
               <svg
@@ -87,9 +87,10 @@ const CodeComponent = ({ children, code = "React.js", copyCode }) => {
         </div>
 
         <SyntaxHighlighter
-          /* language="jsx" */
+          language="jsx"
           style={atomOneDarkReasonable}
           customStyle={{ background: "transparent" }}
+          className={`scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent`}
         >
           {children}
         </SyntaxHighlighter>

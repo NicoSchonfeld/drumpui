@@ -40,7 +40,7 @@ const App = () => {
     <div className={theme}>
       <Navbar />
       <div
-        className="relative overflow-hidden bg-white dark:bg-black"
+        className="relative overflow-hidden bg-gray-100 dark:bg-black"
         ref={ref}
       >
         {backToTopScroll && (

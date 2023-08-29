@@ -1,16 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.html-tag {
-  color: #d4a1a8;
-}
-.attribute {
-  color: #f6b05e;
-}
-.value {
-  color: #9cdcfe;
-}
-.content {
-  color: #d4d4d4;
-}

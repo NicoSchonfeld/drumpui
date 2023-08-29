@@ -8,11 +8,6 @@ const NavbarListPages = () => {
   const pathname = usePathname();
 
   const listNavGuide = [
-    /* {
-      id: "introduction",
-      title: "Introduction",
-      path: "/docs/guide/introduction",
-    }, */
     {
       id: "installation",
       title: "Installation",

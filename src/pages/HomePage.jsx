@@ -86,7 +86,7 @@ const HomePage = ({ theme }) => {
               ></motion.div>
             </div>
 
-            <div className="overflow-hidden bg-white dark:bg-black py-2 px-10 z-10">
+            <div className="overflow-hidden bg-gray-100 dark:bg-black py-2 px-10 z-10">
               <motion.h1
                 initial={{ opacity: 1, y: 500 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ const HomePage = ({ theme }) => {
               </motion.h1>
             </div>
 
-            <div className="overflow-hidden bg-white dark:bg-black py-2 z-10">
+            <div className="overflow-hidden bg-gray-100 dark:bg-black py-2 z-10">
               <motion.h2
                 initial={{ opacity: 1, y: 500 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ const HomePage = ({ theme }) => {
               ></motion.div>
             </div>
 
-            <div className="overflow-hidden bg-white dark:bg-black py-2 px-10 z-10">
+            <div className="overflow-hidden bg-gray-100 dark:bg-black py-2 px-10 z-10">
               <motion.p
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}

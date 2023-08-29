@@ -3,9 +3,14 @@
 import React, { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import styled from "@/styles/lineGradiant.module.css";
+
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
 import Image from "next/image";
 
 import pepe from "@/assets/pepe.png";
+import { codeDemoSectionTwo } from "@/components/CodeExapmleOfComponents";
 
 const SectionTwoHome = ({ refScroll }) => {
   const { scrollYProgress } = useScroll({
@@ -23,7 +28,7 @@ const SectionTwoHome = ({ refScroll }) => {
 
   return (
     <>
-      <section className="h-screen md:h-auto w-full overflow-hidden py-32">
+      <section className="h-auto w-full overflow-hidden py-32">
         <div className="relative w-full h-auto flex items-center justify-center">
           <motion.div
             className="px-10"
@@ -37,17 +42,58 @@ const SectionTwoHome = ({ refScroll }) => {
               className="w-full pb-10 flex items-center justify-center"
               style={{ opacity: widthPage > 1300 ? scrollYProgress : null }}
             >
-              <p className="text-black dark:text-white font-bold text-3xl text-center">
-                Modify the styles <br /> to your liking!
+              <p className="text-black dark:text-white font-bold text-xl md:text-3xl text-center">
+                Modify the styles to your liking!
               </p>
             </motion.div>
-            <Image
+
+            <div className="rounded-lg w-[350px] md:w-[500px] lg:w-[1000px] h-[600px] shadow-xl flex lg:flex-row flex-col overflow-hidden border border-black/20 dark:border-white/20">
+              <div className="bg-gray-900 w-full p-5 overflow-auto text-[10px] flex flex-wrap">
+                <SyntaxHighlighter
+                  language="jsx"
+                  style={atomOneDarkReasonable}
+                  customStyle={{ background: "transparent" }}
+                  className={`scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent`}
+                >
+                  {codeDemoSectionTwo}
+                </SyntaxHighlighter>
+              </div>
+              <div className="bg-white w-full p-5 flex items-center justify-center">
+                <div className="w-[200px] md:w-[400px] bg-white dark:bg-gray-900 border dark:border-black rounded-lg p-4 shadow-sm shadow-indigo-100 dark:shadow-black/50">
+                  <img
+                    alt="photo-1434389677669"
+                    src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
+                    className="h-56 w-full object-cover rounded-md"
+                  />
+
+                  <div className="mt-2">
+                    <dl>
+                      <div>
+                        <dd className="text-sm text-gray-500">$15.000</dd>
+                      </div>
+
+                      <div>
+                        <dd className="font-medium">Chaqueta Bomber</dd>
+                      </div>
+                    </dl>
+
+                    <div className="mt-6 w-full">
+                      <button className="w-full transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
+                        Buy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* <Image
               className="rounded-lg md:w-[1000px] w-96"
               src={pepe}
               width={1000}
               height={500}
               alt="Picture of the author"
-            />
+            /> */}
           </motion.div>
 
           <motion.div

@@ -11,6 +11,16 @@ import styled from "@/styles/lineGradiant.module.css";
 import CodeComponent from "@/components/CodeComponent";
 
 import { useTheme } from "next-themes";
+import {
+  configTWfile,
+  createComponentDemoOfTw,
+  globalsCssFile,
+  installTwInVite,
+  installTwWhithNextJS,
+  installTwWithVite,
+  runProject,
+  terminalNextJS,
+} from "@/components/CodeExapmleOfComponents";
 
 const Intallation = () => {
   const { theme, setTheme } = useTheme();
@@ -123,14 +133,8 @@ const Intallation = () => {
               </div>
 
               <div className="mt-5">
-                <CodeComponent code="Terminal">
-                  <pre>
-                    <code>
-                      <span className="text-white">{`>`}</span>{" "}
-                      <span className="text-sky-500">npx</span>{" "}
-                      <span className="text-white">create-next-app@latest</span>
-                    </code>
-                  </pre>
+                <CodeComponent code="Terminal" copyCode={installTwWhithNextJS}>
+                  {installTwWhithNextJS}
                 </CodeComponent>
               </div>
 
@@ -146,33 +150,8 @@ const Intallation = () => {
                 and can use DrumpUI.
               </p>
 
-              <CodeComponent code="Terminal">
-                <pre>
-                  <code className="text-gray-100">
-                    <span className="text-gray-500">1</span> What is your
-                    project named? my-app
-                    <br />
-                    <span className="text-gray-500">2</span>{" "}
-                    <span className="text-sky-500">
-                      Would you liketo use TypeScript? No / Yes
-                    </span>{" "}
-                    <br />
-                    <span className="text-gray-500">3</span> Would you like to
-                    use ESLint? No / Yes
-                    <br />
-                    <span className="text-gray-500">4</span> Would you like to
-                    use Tailwind CSS? No / Yes
-                    <br />
-                    <span className="text-gray-500">5</span> use `src/`
-                    directory? No / Yes
-                    <br />
-                    <span className="text-gray-500">6</span> Router?
-                    (recommended) No / Yes
-                    <br />
-                    <span className="text-gray-500">7</span> default import
-                    alias? No / Yes
-                  </code>
-                </pre>
+              <CodeComponent code="Terminal" copyCode={terminalNextJS}>
+                {terminalNextJS}
               </CodeComponent>
 
               <p className="mt-10 text-lg font-bold">
@@ -186,20 +165,8 @@ const Intallation = () => {
               </p>
 
               <div className="mt-5">
-                <CodeComponent code="Terminal">
-                  <pre>
-                    <code>
-                      <span className="text-white">{`>`}</span>{" "}
-                      <span className="text-sky-500">npm</span>{" "}
-                      <span className="text-white">
-                        create vite@latest my-project -- --template react
-                      </span>
-                      <br />
-                      <span className="text-white">{`>`}</span>{" "}
-                      <span className="text-sky-500">cd</span>{" "}
-                      <span className="text-white">my-project</span>
-                    </code>
-                  </pre>
+                <CodeComponent code="Terminal" copyCode={installTwWithVite}>
+                  {installTwWithVite}
                 </CodeComponent>
               </div>
 
@@ -209,20 +176,8 @@ const Intallation = () => {
               </p>
 
               <div className="mt-5">
-                <CodeComponent code="Terminal">
-                  <pre>
-                    <code>
-                      <span className="text-white">{`>`}</span>{" "}
-                      <span className="text-sky-500">npm</span>{" "}
-                      <span className="text-white">
-                        install -D tailwindcss postcss autoprefixer
-                      </span>
-                      <br />
-                      <span className="text-white">{`>`}</span>{" "}
-                      <span className="text-sky-500">npx</span>{" "}
-                      <span className="text-white">tailwindcss init -p</span>
-                    </code>
-                  </pre>
+                <CodeComponent code="Terminal" copyCode={installTwInVite}>
+                  {installTwInVite}
                 </CodeComponent>
               </div>
 
@@ -233,40 +188,11 @@ const Intallation = () => {
               </p>
 
               <div className="mt-5">
-                <CodeComponent code="tailwind.config.js">
-                  <pre>
-                    <code>
-                      <span className="text-gray-500">{`/** @type {import('tailwindcss').Config} */`}</span>{" "}
-                      <br />
-                      <span className="text-white">
-                        export default {`{`}
-                      </span>{" "}
-                      <br />
-                      {"    "}
-                      <span className="text-sky-500">content: {`[`}</span>{" "}
-                      <br />
-                      {"        "}
-                      <span className="text-sky-500">"./index.html",</span>{" "}
-                      <br />
-                      {"        "}
-                      <span className="text-sky-500">{`"./src/**/*.{js,ts,jsx,tsx}",`}</span>{" "}
-                      <br />
-                      {"    "}
-                      <span className="text-sky-500">{`],`}</span> <br />
-                      {"    "}
-                      <span className="text-white">theme: {`{`}</span> <br />
-                      {"    "}
-                      <span className="text-white">extend: ,</span>
-                      <br />
-                      {"    "}
-                      <span className="text-white">{`},`}</span>
-                      <br />
-                      {"    "}
-                      <span className="text-white">plugins: {`[]`},</span>
-                      <br />
-                      <span className="text-white">{`},`}</span>
-                    </code>
-                  </pre>
+                <CodeComponent
+                  code="tailwind.config.js"
+                  copyCode={configTWfile}
+                >
+                  {configTWfile}
                 </CodeComponent>
               </div>
 
@@ -277,22 +203,8 @@ const Intallation = () => {
               </p>
 
               <div className="mt-5">
-                <CodeComponent code="globals.css">
-                  <pre>
-                    <code>
-                      <span className="text-red-300">@tailwind</span>{" "}
-                      <span className="text-yellow-500">base</span>
-                      <span className="text-white">;</span>
-                      <br />
-                      <span className="text-red-300">@tailwind</span>{" "}
-                      <span className="text-yellow-500">components</span>
-                      <span className="text-white">;</span>
-                      <br />
-                      <span className="text-red-300">@tailwind</span>{" "}
-                      <span className="text-yellow-500">utilities</span>
-                      <span className="text-white">;</span>
-                    </code>
-                  </pre>
+                <CodeComponent code="globals.css" copyCode={globalsCssFile}>
+                  {globalsCssFile}
                 </CodeComponent>
               </div>
 
@@ -302,14 +214,8 @@ const Intallation = () => {
               </p>
 
               <div className="mt-5">
-                <CodeComponent code="Terminal">
-                  <pre>
-                    <code>
-                      <span className="text-white">{`>`}</span>{" "}
-                      <span className="text-sky-500">npm</span>{" "}
-                      <span className="text-white">run dev</span>
-                    </code>
-                  </pre>
+                <CodeComponent code="Terminal" copyCode={runProject}>
+                  {runProject}
                 </CodeComponent>
               </div>
 
@@ -319,42 +225,11 @@ const Intallation = () => {
               </p>
 
               <div className="mt-5 mb-20">
-                <CodeComponent code="App.jsx">
-                  <pre>
-                    <code>
-                      <span className="text-red-300">
-                        export default function{" "}
-                        <span className="text-yellow-500">App()</span>{" "}
-                        <span className="text-sky-500">{`{`}</span>
-                        <br />
-                        {"    "}
-                        <span className="text-red-300">return (</span>
-                        <br />
-                        {"        "}
-                        <span className="text-white">{`<`}</span>
-                        <span className="text-red-300">h1</span>{" "}
-                        <span className="text-yellow-500">className="</span>
-                        <span className="text-sky-300">
-                          text-3xl font-bold underline
-                        </span>
-                        <span className="text-yellow-500">"</span>
-                        <span className="text-white">{`>`}</span>
-                        <br />
-                        {"            "}
-                        <span className="text-white">Hello world!</span>
-                        <br />
-                        {"        "}
-                        <span className="text-white">{`</`}</span>
-                        <span className="text-red-300">h1</span>
-                        <span className="text-white">{`>`}</span>
-                        <br />
-                        {"    "}
-                        <span className="text-red-300">)</span>
-                        <br />
-                        <span className="text-red-300">{`}`}</span>
-                      </span>
-                    </code>
-                  </pre>
+                <CodeComponent
+                  code="App.jsx"
+                  copyCode={createComponentDemoOfTw}
+                >
+                  {createComponentDemoOfTw}
                 </CodeComponent>
               </div>
             </div>

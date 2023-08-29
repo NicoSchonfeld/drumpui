@@ -10,11 +10,16 @@ import styled from "@/styles/lineGradiant.module.css";
 import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
 import { useTheme } from "next-themes";
+import {
+  codeInput,
+  codeInputLeftAndRightAddons,
+  codeInputSelect,
+  codePasswordInputExample,
+} from "@/components/CodeExapmleOfComponents";
 
 const Inputs = () => {
   const { theme, setTheme } = useTheme();
   const [showPassword, setShowPassword] = useState(false);
-  /* const [backToTopScroll, setBackToTopScroll] = useState(false); */
 
   const togglePassword = () => {
     setShowPassword(!showPassword);
@@ -81,16 +86,14 @@ const Inputs = () => {
             <div>
               <p className="text-2xl font-bold">Demo</p>
               <WindowsComponents>
-                <div className="flex flex-col items-start gap-1">
-                  <input
-                    type="text"
-                    placeholder="This is a input"
-                    className="text-gray-600 dark:text-white transition rounded border dark:border-white/20 px-3 py-1 bg-white dark:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-600"
-                  />
-                </div>
+                <input
+                  type="text"
+                  placeholder="This is a input"
+                  className="text-gray-600 dark:text-white transition rounded border dark:border-white/20 px-3 py-1 bg-white dark:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-600"
+                />
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codeInput}>{codeInput}</CodeComponent>
             </div>
 
             <div className="mt-32">
@@ -124,7 +127,9 @@ const Inputs = () => {
                 </span>
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codeInputLeftAndRightAddons}>
+                {codeInputLeftAndRightAddons}
+              </CodeComponent>
             </div>
 
             <div className="mt-32">
@@ -186,7 +191,9 @@ const Inputs = () => {
                 </span>
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codePasswordInputExample}>
+                {codePasswordInputExample}
+              </CodeComponent>
             </div>
 
             <div className="mt-32 mb-20">
@@ -210,7 +217,9 @@ const Inputs = () => {
                 </select>
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codeInputSelect}>
+                {codeInputSelect}
+              </CodeComponent>
             </div>
 
             <div className={styled.gridLineCenter}></div>

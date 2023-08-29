@@ -10,6 +10,7 @@ import styled from "@/styles/lineGradiant.module.css";
 import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
 import { useTheme } from "next-themes";
+import { codeAccordion } from "@/components/CodeExapmleOfComponents";
 
 const Accordion = () => {
   const { theme, setTheme } = useTheme();
@@ -109,70 +110,8 @@ const Accordion = () => {
                 </details>
               </WindowsComponents>
 
-              <CodeComponent>
-                <pre className="mt-10 text-white">
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">p-4 w-[500px] max-auto</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">
-                    animate-pulse flex space-x-4
-                  </span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">flex-1 space-y-3 py-1</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                </pre>
+              <CodeComponent copyCode={codeAccordion}>
+                {codeAccordion}
               </CodeComponent>
             </div>
 

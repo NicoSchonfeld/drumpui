@@ -12,10 +12,10 @@ const ProviderTheme = ({ children }) => {
 
   return (
     <div className={theme}>
-      {/* <ThemeProvider>{children}</ThemeProvider> */}
-      <div className="w-full h-screen flex items-center justify-center text-6xl font-bold text-gray-600 dark:text-gray-100 text-center">
+      <ThemeProvider>{children}</ThemeProvider>
+      {/* <div className="w-full h-screen flex items-center justify-center text-6xl font-bold text-gray-600 dark:text-gray-100 text-center">
         Maintenance.
-      </div>
+      </div> */}
     </div>
   );
 };

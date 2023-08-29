@@ -13,6 +13,7 @@ import Image from "next/image";
 import photoUserProfile from "@/assets/photoUserProfile.jpg";
 import CodeComponent from "@/components/CodeComponent";
 import { useTheme } from "next-themes";
+import { codeAvatar } from "@/components/CodeExapmleOfComponents";
 
 const Avatar = () => {
   const { theme, setTheme } = useTheme();
@@ -104,98 +105,7 @@ const Avatar = () => {
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>
-                <pre className="mt-10 text-white">
-                  <code>
-                    &lt;<span className="text-red-500">img</span>{" "}
-                    <span className="text-yellow-500">className</span>=
-                    <span className="text-yellow-500">"</span>
-                    <span className="text-gray-400">
-                      rounded-full w-20 h-20
-                    </span>
-                    <span className="text-yellow-500">"</span>
-                    <br />
-                    <span className="text-yellow-500">src</span>=
-                    <span className="text-yellow-500">
-                      "<span className="text-gray-400">...</span>"
-                    </span>
-                    <br />
-                    <span className="text-yellow-500">alt</span>=
-                    <span className="text-yellow-500">
-                      "<span className="text-gray-400">...</span>"
-                    </span>
-                    <br />
-                    /&gt;
-                    <br />
-                    <br />
-                    &lt;<span className="text-red-500">img</span>{" "}
-                    <span className="text-yellow-500">className</span>=
-                    <span className="text-yellow-500">"</span>
-                    <span className="text-gray-400">
-                      rounded-full w-20 h-20 <br /> p-0.5 outline
-                      outline-green-500
-                    </span>
-                    <span className="text-yellow-500">"</span>
-                    <br />
-                    <span className="text-yellow-500">src</span>=
-                    <span className="text-yellow-500">
-                      "<span className="text-gray-400">...</span>"
-                    </span>
-                    <br />
-                    <span className="text-yellow-500">alt</span>=
-                    <span className="text-yellow-500">
-                      "<span className="text-gray-400">...</span>"
-                    </span>
-                    <br />
-                    /&gt;
-                    <br />
-                    <br />
-                    &lt;<span className="text-red-500">div</span>{" "}
-                    <span className="text-yellow-500">className</span>=
-                    <span className="text-yellow-500">"</span>
-                    <span className="text-gray-400">relative</span>
-                    <span className="text-yellow-500">"</span>
-                    &gt;
-                    <br />
-                    {"    "}&lt;<span className="text-red-500">div</span>{" "}
-                    <span className="text-yellow-500">className</span>=
-                    <span className="text-yellow-500">"</span>
-                    <span className="text-gray-400">
-                      w-[16px] h-[16px] bg-green-500 rounded-full <br />
-                      {"    "}absolute top-0 right-0 flex items-center
-                      justify-center
-                    </span>
-                    <span className="text-yellow-500">"</span>&gt;&lt;/
-                    <span className="text-red-500">div</span>&gt;
-                    <br />
-                    <br />
-                    {"    "}&lt;<span className="text-red-500">img</span>{" "}
-                    <span className="text-yellow-500">className</span>=
-                    <span className="text-yellow-500">"</span>
-                    <span className="text-gray-400">
-                      rounded-full w-20 h-20 <br /> {"    "}p-0.5 outline
-                      outline-green-500
-                    </span>
-                    <span className="text-yellow-500">"</span>
-                    <br />
-                    {"    "}
-                    <span className="text-yellow-500">src</span>=
-                    <span className="text-yellow-500">
-                      "<span className="text-gray-400">...</span>"
-                    </span>
-                    <br />
-                    {"    "}
-                    <span className="text-yellow-500">alt</span>=
-                    <span className="text-yellow-500">
-                      "<span className="text-gray-400">...</span>"
-                    </span>
-                    <br />
-                    {"    "}/&gt;
-                    <br />
-                    &lt;/<span className="text-red-500">div</span>&gt;
-                  </code>
-                </pre>
-              </CodeComponent>
+              <CodeComponent copyCode={codeAvatar}>{codeAvatar}</CodeComponent>
             </div>
 
             <div className={styled.gridLineCenter}></div>

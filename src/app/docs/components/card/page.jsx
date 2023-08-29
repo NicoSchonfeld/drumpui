@@ -10,6 +10,7 @@ import styled from "@/styles/lineGradiant.module.css";
 import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
 import { useTheme } from "next-themes";
+import { codeCard, codeCardShop } from "@/components/CodeExapmleOfComponents";
 
 const Card = () => {
   const { theme, setTheme } = useTheme();
@@ -95,11 +96,11 @@ const Card = () => {
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codeCard}>{codeCard}</CodeComponent>
             </div>
 
             <div className="mt-32 mb-20">
-              <p className="text-2xl font-bold">Demo</p>
+              <p className="text-2xl font-bold">Shop card</p>
 
               <WindowsComponents>
                 <div className="w-[200px] md:w-[400px] bg-white dark:bg-gray-900 rounded-lg p-4 shadow-sm shadow-indigo-100 dark:shadow-black/50">
@@ -129,7 +130,9 @@ const Card = () => {
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codeCardShop}>
+                {codeCardShop}
+              </CodeComponent>
             </div>
 
             <div className={styled.gridLineCenter}></div>

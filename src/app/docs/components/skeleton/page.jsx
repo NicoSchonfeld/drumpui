@@ -10,6 +10,12 @@ import styled from "@/styles/lineGradiant.module.css";
 import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
 import { useTheme } from "next-themes";
+import {
+  codeSkeleton,
+  codeSkeletonCircleAndTextSkeleton,
+  codeSkeletonCircleAndTextSkeletonVariant2,
+  codeSkeletonHeightAndWidth,
+} from "@/components/CodeExapmleOfComponents";
 
 const Skeleton = () => {
   const { theme, setTheme } = useTheme();
@@ -87,72 +93,8 @@ const Skeleton = () => {
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>
-                <pre className="mt-10 text-white">
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">
-                    sm:w-[500px] w-[300px] p-4
-                  </span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">
-                    animate-pulse flex space-x-4
-                  </span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">flex-1 space-y-3 py-1</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                </pre>
+              <CodeComponent copyCode={codeSkeleton}>
+                {codeSkeleton}
               </CodeComponent>
             </div>
 
@@ -171,52 +113,8 @@ const Skeleton = () => {
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>
-                <pre className="mt-10 text-white">
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">
-                    sm:w-[500px] w-[300px] p-4
-                  </span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">
-                    animate-pulse flex space-x-4
-                  </span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">flex-1 space-y-3 py-1</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-10 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                </pre>
+              <CodeComponent copyCode={codeSkeletonHeightAndWidth}>
+                {codeSkeletonHeightAndWidth}
               </CodeComponent>
             </div>
 
@@ -237,17 +135,8 @@ const Skeleton = () => {
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>
-                <pre className="mt-10">
-                  &lt;div class="sm:w-[500px] w-[300px] p-4"&gt; &lt;div
-                  class="animate-pulse flex flex-col space-y-4"&gt; &lt;div
-                  class="rounded-full bg-slate-200 h-10 w-10"&gt;&lt;/div&gt;
-                  &lt;div class="flex-1 space-y-3 py-1"&gt; &lt;div class="h-2
-                  bg-slate-200 "&gt;&lt;/div&gt; &lt;div class="h-2 bg-slate-200
-                  "&gt;&lt;/div&gt; &lt;div class="h-2 bg-slate-200
-                  "&gt;&lt;/div&gt; &lt;div class="w-[75%] h-2 bg-slate-200
-                  "&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;
-                </pre>
+              <CodeComponent copyCode={codeSkeletonCircleAndTextSkeleton}>
+                {codeSkeletonCircleAndTextSkeleton}
               </CodeComponent>
             </div>
 
@@ -270,19 +159,10 @@ const Skeleton = () => {
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>
-                <pre className="mt-10">
-                  &lt;div className=&quot;sm:w-[500px] w-[300px] p-4&quot;&gt;
-                  &lt;div className=&quot;animate-pulse flex space-x-4&quot;&gt;
-                  &lt;div className=&quot;rounded-full bg-slate-200 h-10
-                  w-10&quot;&gt;&lt;/div&gt; &lt;div className=&quot;flex-1
-                  space-y-3 py-1&quot;&gt; &lt;div className=&quot;h-2
-                  bg-slate-200&quot;&gt;&lt;/div&gt; &lt;div className=&quot;h-2
-                  bg-slate-200&quot;&gt;&lt;/div&gt; &lt;div className=&quot;h-2
-                  bg-slate-200&quot;&gt;&lt;/div&gt; &lt;div className=&quot;h-2
-                  bg-slate-200&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt;
-                  &lt;/div&gt;
-                </pre>
+              <CodeComponent
+                copyCode={codeSkeletonCircleAndTextSkeletonVariant2}
+              >
+                {codeSkeletonCircleAndTextSkeletonVariant2}
               </CodeComponent>
             </div>
 

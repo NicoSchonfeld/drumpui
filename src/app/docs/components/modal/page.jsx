@@ -11,6 +11,11 @@ import styled from "@/styles/lineGradiant.module.css";
 import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
 import { useTheme } from "next-themes";
+import {
+  codeDrawer,
+  codeMenu,
+  codeModal,
+} from "@/components/CodeExapmleOfComponents";
 
 const Modal = () => {
   const { theme, setTheme } = useTheme();
@@ -183,7 +188,7 @@ const Modal = () => {
                 </AnimatePresence>
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codeModal}>{codeModal}</CodeComponent>
             </div>
 
             <div className="mt-32">
@@ -271,7 +276,7 @@ const Modal = () => {
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codeMenu}>{codeMenu}</CodeComponent>
             </div>
 
             <div className="mt-32 mb-20">
@@ -350,7 +355,7 @@ const Modal = () => {
                 </AnimatePresence>
               </WindowsComponents>
 
-              <CodeComponent>Code</CodeComponent>
+              <CodeComponent copyCode={codeDrawer}>{codeDrawer}</CodeComponent>
             </div>
 
             <div className={styled.gridLineCenter}></div>

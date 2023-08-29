@@ -9,7 +9,12 @@ import Link from "next/link";
 import styled from "@/styles/lineGradiant.module.css";
 import WindowsComponents from "@/components/WindowsComponents";
 import CodeComponent from "@/components/CodeComponent";
+
 import { useTheme } from "next-themes";
+import {
+  codeAlert,
+  codeAlertVariantTwo,
+} from "@/components/CodeExapmleOfComponents";
 
 const Alert = () => {
   const { theme, setTheme } = useTheme();
@@ -100,7 +105,7 @@ const Alert = () => {
                   </span>
 
                   <p className="text-red-900 sm:text-base text-sm">
-                    There was an error processing your request
+                    Unexpected error. Please try again later.
                   </p>
                 </div>
 
@@ -127,7 +132,7 @@ const Alert = () => {
                   </span>
 
                   <p className="text-green-900 sm:text-base text-sm">
-                    Data uploaded to the server. Fire on!
+                    Data uploaded to the server!
                   </p>
                 </div>
 
@@ -159,7 +164,7 @@ const Alert = () => {
                   </span>
 
                   <p className="text-green-900 sm:text-base text-sm">
-                    Seems your account is about expire, upgrade now
+                    Seems your account is about expire.
                   </p>
                 </div>
 
@@ -188,76 +193,12 @@ const Alert = () => {
                   </span>
 
                   <p className="text-sky-900 sm:text-base text-sm">
-                    DrumpUI is going live on August 30th. Get ready!
+                    Updated information. Please check!
                   </p>
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>
-                <pre className="mt-10 text-white">
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">p-4 w-[500px] max-auto</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">
-                    animate-pulse flex space-x-4
-                  </span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">flex-1 space-y-3 py-1</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                </pre>
-              </CodeComponent>
+              <CodeComponent copyCode={codeAlert}>{codeAlert}</CodeComponent>
             </div>
 
             <div className="mb-20">
@@ -289,7 +230,7 @@ const Alert = () => {
                   </span>
 
                   <p className="text-white sm:text-base text-sm">
-                    There was an error processing your request
+                    Unexpected error. Please try again later.
                   </p>
                 </div>
 
@@ -316,7 +257,7 @@ const Alert = () => {
                   </span>
 
                   <p className="text-white sm:text-base text-sm">
-                    Data uploaded to the server. Fire on!
+                    Data uploaded to the server!
                   </p>
                 </div>
 
@@ -348,7 +289,7 @@ const Alert = () => {
                   </span>
 
                   <p className="text-white sm:text-base text-sm">
-                    Seems your account is about expire, upgrade now
+                    Seems your account is about expire.
                   </p>
                 </div>
 
@@ -377,75 +318,13 @@ const Alert = () => {
                   </span>
 
                   <p className="text-white sm:text-base text-sm">
-                    DrumpUI is going live on August 30th. Get ready!
+                    Updated information. Please check!
                   </p>
                 </div>
               </WindowsComponents>
 
-              <CodeComponent>
-                <pre className="mt-10 text-white">
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">p-4 w-[500px] max-auto</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">
-                    animate-pulse flex space-x-4
-                  </span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">flex-1 space-y-3 py-1</span>
-                  <span className="text-yellow-500">"</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  {"    "}
-                  &lt;<span className="text-red-500">div</span>{" "}
-                  <span className="text-yellow-500">className</span>=
-                  <span className="text-yellow-500">"</span>
-                  <span className="text-gray-400">h-5 bg-slate-200</span>
-                  <span className="text-yellow-500">"</span>&gt;&lt;/
-                  <span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  {"    "}
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                  <br />
-                  &lt;/<span className="text-red-500">div</span>&gt;
-                </pre>
+              <CodeComponent copyCode={codeAlertVariantTwo}>
+                {codeAlertVariantTwo}
               </CodeComponent>
             </div>
 

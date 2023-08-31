@@ -15,14 +15,18 @@ const Footer = () => {
     {
       id: "github",
       title: "Github",
-      path: "https://github.com/NicoSchonfeld/drumpui",
+      path: "https://github.com/NicoSchonfeld/drumpui-components/tree/main/src/components",
     },
     {
       id: "twitter",
       title: "Twitter",
       path: "https://twitter.com/NicoSchonfeld__",
     },
-    { id: "sponsor", title: "Sponsor", path: "#" },
+    {
+      id: "sponsor",
+      title: "Sponsor",
+      path: "https://cafecito.app/nicoschonfeld",
+    },
   ];
 
   const listNavGuide = [

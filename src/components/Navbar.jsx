@@ -196,7 +196,7 @@ const Navbar = () => {
             <li>
               <a
                 className="text-gray-400 hover:text-gray-500 transition-all"
-                href="https://github.com/NicoSchonfeld/drumpui"
+                href="https://github.com/NicoSchonfeld/drumpui-components/tree/main/src/components"
                 target="_blank"
               >
                 <BsGithub />
@@ -308,9 +308,14 @@ const Navbar = () => {
               </div>
             </li>
             <li>
-              <button className="flex items-center gap-2 transition rounded border border-gray-300 bg-gray-200/50 text-gray-800 hover:bg-gray-300/50 dark:bg-gray-200 dark:hover:bg-gray-300 px-4 py-2 text-sm font-bold focus:outline-none">
+              <a
+                href="https://cafecito.app/nicoschonfeld"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition rounded border border-gray-300 bg-gray-200/50 text-gray-800 hover:bg-gray-300/50 dark:bg-gray-200 dark:hover:bg-gray-300 px-4 py-2 text-sm font-bold focus:outline-none"
+              >
                 <span className="text-red-500">❤</span> Sponsor
-              </button>
+              </a>
             </li>
           </ul>
 
@@ -407,7 +412,7 @@ const Navbar = () => {
                     <li>
                       <a
                         className="text-gray-400 hover:text-gray-500 transition-all text-2xl"
-                        href="https://github.com/NicoSchonfeld/drumpui"
+                        href="https://github.com/NicoSchonfeld/drumpui-components/tree/main/src/components"
                         target="_blank"
                       >
                         <BsGithub />
@@ -512,9 +517,14 @@ const Navbar = () => {
                       </div>
                     </li>
                     <li>
-                      <button className="flex items-center gap-2 transition rounded border border-gray-300 bg-gray-200/50 text-gray-800 hover:bg-gray-300/50 dark:bg-gray-200 dark:hover:bg-gray-300 px-4 py-2 text-sm font-bold focus:outline-none">
+                      <a
+                        href="https://cafecito.app/nicoschonfeld"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 transition rounded border border-gray-300 bg-gray-200/50 text-gray-800 hover:bg-gray-300/50 dark:bg-gray-200 dark:hover:bg-gray-300 px-4 py-2 text-sm font-bold focus:outline-none"
+                      >
                         <span className="text-red-500">❤</span> Sponsor
-                      </button>
+                      </a>
                     </li>
                   </ul>
                 </div>

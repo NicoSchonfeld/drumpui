@@ -152,9 +152,14 @@ const HomePage = ({ theme }) => {
                   Get started
                 </Link>
 
-                <button className="flex items-center transition rounded border border-gray-900 hover:border-gray-700 bg-gray-900 px-6 py-3 text-sm font-medium text-white hover:bg-gray-700 hover:text-white">
+                <a
+                  href="https://github.com/NicoSchonfeld/drumpui-components/tree/main/src/components"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center transition rounded border border-gray-900 hover:border-gray-700 bg-gray-900 px-6 py-3 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >
                   <AiFillGithub className="me-2" /> Github
-                </button>
+                </a>
               </motion.div>
             </div>
           </div>

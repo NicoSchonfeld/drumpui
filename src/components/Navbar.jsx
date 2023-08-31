@@ -65,6 +65,23 @@ const Navbar = () => {
       title: "Breadcrumb",
       path: "/docs/components/breadcrumb",
     },
+    {
+      id: "creadit_card",
+      title: "Credit card",
+      path: "/docs/components/creaditcard",
+    },
+    {
+      id: "table",
+      title: "Table",
+      path: "/docs/components/table",
+      newVersion: true,
+    },
+    {
+      id: "headers",
+      title: "Headers",
+      path: "/docs/components/headers",
+      newVersion: true,
+    },
   ];
 
   const toggleThemeLight = () => {

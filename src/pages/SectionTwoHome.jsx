@@ -47,7 +47,7 @@ const SectionTwoHome = ({ refScroll }) => {
               </p>
             </motion.div>
 
-            <div className="rounded-lg w-[350px] md:w-[500px] lg:w-[1000px] h-[600px] shadow-xl flex lg:flex-row flex-col overflow-hidden border border-black/20 dark:border-white/20">
+            <div className="rounded-lg w-[310px] md:w-[500px] lg:w-[1000px] h-[600px] shadow-xl flex lg:flex-row flex-col overflow-hidden border border-black/20 dark:border-white/20">
               <div className="bg-gray-900 w-full p-5 overflow-auto text-[10px] flex flex-wrap">
                 <SyntaxHighlighter
                   language="jsx"

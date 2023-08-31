@@ -82,7 +82,7 @@ const Skeleton = () => {
               <p className="mt-2">You can use it as a standalone component.</p>
 
               <WindowsComponents>
-                <div className="sm:w-[500px] w-[300px] p-4">
+                <div className="sm:w-[500px] w-[250px] p-4">
                   <div className="animate-pulse flex space-x-4">
                     <div className="flex-1 space-y-3 py-1">
                       <div className="h-5 bg-slate-200"></div>
@@ -104,7 +104,7 @@ const Skeleton = () => {
               </p>
 
               <WindowsComponents>
-                <div className="sm:w-[500px] w-[300px] p-4">
+                <div className="sm:w-[500px] w-[250px] p-4">
                   <div className="animate-pulse flex space-x-4">
                     <div className="flex-1 space-y-3 py-1">
                       <div className="h-10 bg-slate-200"></div>
@@ -122,7 +122,7 @@ const Skeleton = () => {
               <p className="text-2xl font-bold">Circle and Text Skeleton</p>
 
               <WindowsComponents>
-                <div className="sm:w-[500px] w-[300px] p-4">
+                <div className="sm:w-[500px] w-[250px] p-4">
                   <div className="animate-pulse flex flex-col space-y-4">
                     <div className="rounded-full bg-slate-200 h-10 w-10"></div>
                     <div className="flex-1 space-y-3 py-1">
@@ -146,7 +146,7 @@ const Skeleton = () => {
               </p>
 
               <WindowsComponents>
-                <div className="sm:w-[500px] w-[300px] p-4">
+                <div className="sm:w-[500px] w-[250px] p-4">
                   <div className="animate-pulse flex space-x-4">
                     <div className="rounded-full bg-slate-200 h-10 w-10"></div>
                     <div className="flex-1 space-y-3 py-1">

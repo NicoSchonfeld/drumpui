@@ -15,6 +15,7 @@ import {
   codeDrawer,
   codeMenu,
   codeModal,
+  terminalCommandNpmIFramerMotion,
 } from "@/components/CodeExapmleOfComponents";
 
 const Modal = () => {
@@ -189,6 +190,30 @@ const Modal = () => {
                 </AnimatePresence>
               </WindowsComponents>
 
+              <p className="my-5">
+                To make this type of animations we use Framer-Motion. <br /> You
+                can copy this command and place it in your terminal to install
+                the dependencies. <br /> We also leave you your{" "}
+                <a
+                  href="https://www.framer.com/motion/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-500 hover:text-pink-700 transition-all"
+                >
+                  Framer-motion
+                </a>{" "}
+                documentation.
+              </p>
+
+              <CodeComponent copyCode={terminalCommandNpmIFramerMotion}>
+                {terminalCommandNpmIFramerMotion}
+              </CodeComponent>
+
+              <p className="my-5">
+                Once installed we have to import motion and AnimatePresence from
+                "framer-motion".
+              </p>
+
               <CodeComponent copyCode={codeModal}>{codeModal}</CodeComponent>
             </div>
 
@@ -277,6 +302,30 @@ const Modal = () => {
                 </div>
               </WindowsComponents>
 
+              <p className="my-5">
+                To make this type of animations we use Framer-Motion. <br /> You
+                can copy this command and place it in your terminal to install
+                the dependencies. <br /> We also leave you your{" "}
+                <a
+                  href="https://www.framer.com/motion/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-500 hover:text-pink-700 transition-all"
+                >
+                  Framer-motion
+                </a>{" "}
+                documentation.
+              </p>
+
+              <CodeComponent copyCode={terminalCommandNpmIFramerMotion}>
+                {terminalCommandNpmIFramerMotion}
+              </CodeComponent>
+
+              <p className="my-5">
+                Once installed we have to import motion and AnimatePresence from
+                "framer-motion".
+              </p>
+
               <CodeComponent copyCode={codeMenu}>{codeMenu}</CodeComponent>
             </div>
 
@@ -355,6 +404,30 @@ const Modal = () => {
                   )}
                 </AnimatePresence>
               </WindowsComponents>
+
+              <p className="my-5">
+                To make this type of animations we use Framer-Motion. <br /> You
+                can copy this command and place it in your terminal to install
+                the dependencies. <br /> We also leave you your{" "}
+                <a
+                  href="https://www.framer.com/motion/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-500 hover:text-pink-700 transition-all"
+                >
+                  Framer-motion
+                </a>{" "}
+                documentation.
+              </p>
+
+              <CodeComponent copyCode={terminalCommandNpmIFramerMotion}>
+                {terminalCommandNpmIFramerMotion}
+              </CodeComponent>
+
+              <p className="my-5">
+                Once installed we have to import motion and AnimatePresence from
+                "framer-motion".
+              </p>
 
               <CodeComponent copyCode={codeDrawer}>{codeDrawer}</CodeComponent>
             </div>

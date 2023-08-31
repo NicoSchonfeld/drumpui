@@ -36,27 +36,27 @@ const HomePage = ({ theme }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
           className={styled.gridLine90degLeft}
         ></motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
           className={styled.gridLine90degright}
         ></motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
           className={styled.gridLine90degLeftNoneAbs}
         ></motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
           className={styled.gridLine90degrightNoneAbs}
         ></motion.div>
 
@@ -81,7 +81,7 @@ const HomePage = ({ theme }) => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.5 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: 1 }}
                 className={styled.gridLineCenter}
               ></motion.div>
             </div>
@@ -90,7 +90,7 @@ const HomePage = ({ theme }) => {
               <motion.h1
                 initial={{ opacity: 1, y: 500 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
                 className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-4xl md:text-7xl font-extrabold max-w-6xl text-center"
               >
                 Build your website with
@@ -101,7 +101,7 @@ const HomePage = ({ theme }) => {
               <motion.h2
                 initial={{ opacity: 1, y: 500 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
                 className="bg-clip-text text-transparent bg-gradient-to-b from-black/60 to-black dark:from-white dark:to-white/60 text-4xl md:text-7xl font-extrabold max-w-6xl text-center"
               >
                 Free Tailwind CSS components
@@ -112,7 +112,7 @@ const HomePage = ({ theme }) => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.5 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: 1 }}
                 className={styled.gridLineCenter}
               ></motion.div>
             </div>
@@ -121,7 +121,7 @@ const HomePage = ({ theme }) => {
               <motion.p
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
                 className="text-black/50 dark:text-white/50 text-center"
               >
                 Search, copy, paste and ready to use to your liking
@@ -132,16 +132,16 @@ const HomePage = ({ theme }) => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.5 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: 1 }}
                 className={styled.gridLineCenter}
               ></motion.div>
             </div>
 
             <div className="overflow-hidden">
               <motion.div
-                initial={{ opacity: 0, y: 60 }}
+                initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
                 className="flex items-center space-x-5"
               >
                 <Link

@@ -81,14 +81,14 @@ export const createComponentDemoOfTw = `export default function App() {
 /* Avatar */
 
 export const codeAvatar = `<Image
-src={photoUserProfile}
+src={...}
 width={50}
 h={50}
 className="transition-all rounded-full"
 />
 
 <Image
-src={photoUserProfile}
+src={...}
 width={50}
 h={50}
 className="transition-all rounded-full p-0.5 outline outline-green-500"
@@ -98,7 +98,7 @@ className="transition-all rounded-full p-0.5 outline outline-green-500"
 <div className="w-[16px] h-[16px] bg-green-500 rounded-full absolute top-0 right-0 flex items-center justify-center"></div>
 
 <Image
-  src={photoUserProfile}
+  src={...}
   width={50}
   h={50}
   className="transition-all rounded-full"
@@ -379,64 +379,19 @@ open
 /* Badge */
 
 export const codeBadge = `<span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-purple-700">
-Live
+Info
 </span>
 
 <span className="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700">
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  viewBox="0 0 24 24"
-  strokeWidth="1.5"
-  stroke="currentColor"
-  className="-ms-1 me-1.5 h-4 w-4"
->
-  <path
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-  />
-</svg>
-
-<p className="whitespace-nowrap text-sm">Paid</p>
+<p className="whitespace-nowrap text-sm">Correct</p>
 </span>
 
 <span className="inline-flex items-center justify-center rounded-full bg-amber-100 px-2.5 py-0.5 text-amber-700">
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  viewBox="0 0 24 24"
-  strokeWidth="1.5"
-  stroke="currentColor"
-  className="-ms-1 me-1.5 h-4 w-4"
->
-  <path
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    d="M8.25 9.75h4.875a2.625 2.625 0 010 5.25H12M8.25 9.75L10.5 7.5M8.25 9.75L10.5 12m9-7.243V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185z"
-  />
-</svg>
-
-<p className="whitespace-nowrap text-sm">Refunded</p>
+<p className="whitespace-nowrap text-sm">Warning</p>
 </span>
 
 <span className="inline-flex items-center justify-center rounded-full bg-red-100 px-2.5 py-0.5 text-red-700">
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  viewBox="0 0 24 24"
-  strokeWidth="1.5"
-  stroke="currentColor"
-  className="-ms-1 me-1.5 h-4 w-4"
->
-  <path
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
-  />
-</svg>
-
-<p className="whitespace-nowrap text-sm">Failed</p>
+<p className="whitespace-nowrap text-sm">Error</p>
 </span>`;
 
 /* Button */
@@ -743,7 +698,11 @@ dark:text-white w-[18rem] px-2 py-1.5 bg-white dark:bg-white/10"
 
 /* Animated components */
 
-export const codeModal = `const [openModal, setOpenModal] = useState(false);
+export const terminalCommandNpmIFramerMotion = `npm i framer-motion`;
+
+export const codeModal = `import { motion, AnimatePresence } from "framer-motion";
+
+const [openModal, setOpenModal] = useState(false);
 const toggleModal = () => {
   setOpenModal(!openModal);
 };
@@ -823,7 +782,9 @@ const toggleModal = () => {
 </AnimatePresence>
 </div>`;
 
-export const codeMenu = `const [openDropdown, setOpenDropdown] = useState(false);
+export const codeMenu = `import { motion, AnimatePresence } from "framer-motion";
+
+const [openDropdown, setOpenDropdown] = useState(false);
 const toggleDrop = () => {
   setOpenDropdown(!openDropdown);
 };
@@ -903,7 +864,9 @@ const toggleDrop = () => {
 </AnimatePresence>
 </div>`;
 
-export const codeDrawer = `const [openDrawer, setOpenDrawer] = useState(false);
+export const codeDrawer = `import { motion, AnimatePresence } from "framer-motion";
+
+const [openDrawer, setOpenDrawer] = useState(false);
 const toggleDrawer = () => {
   setOpenDrawer(!openDrawer);
 };

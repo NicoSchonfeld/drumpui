@@ -360,13 +360,13 @@ const Navbar = () => {
 
       <AnimatePresence>
         {openDrawer && (
-          <div className="fixed top-0 left-0 bg-gray-900/50 w-full h-[100%] flex items-center justify-center backdrop-blur-sm z-[60]">
+          <div className="fixed top-0 left-0 bg-gray-900/50 w-full h-full flex items-center justify-center backdrop-blur-sm z-[60]">
             <motion.div
               initial={{ opacity: 1, y: 1000 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               exit={{ opacity: 1, y: 1000 }}
-              className="w-full flex h-screen flex-col justify-between border-e bg-white dark:bg-black fixed top-0 right-0"
+              className="w-full flex h-screen overflow-scroll flex-col justify-between border-e bg-white dark:bg-black fixed top-0 right-0"
             >
               <div className="px-4 py-6 container mx-auto">
                 <div className="w-full flex items-center justify-between">

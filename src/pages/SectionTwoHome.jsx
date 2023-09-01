@@ -9,7 +9,7 @@ import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/
 
 import Image from "next/image";
 
-import pepe from "@/assets/pepe.png";
+import ropa from "@/assets/ropa.jpg";
 import { codeDemoSectionTwo } from "@/components/CodeExapmleOfComponents";
 
 const SectionTwoHome = ({ refScroll }) => {
@@ -60,10 +60,12 @@ const SectionTwoHome = ({ refScroll }) => {
               </div>
               <div className="bg-white w-full p-5 flex items-center justify-center">
                 <div className="w-[200px] md:w-[400px] bg-white dark:bg-gray-900 border dark:border-black rounded-lg p-4 shadow-sm shadow-indigo-100 dark:shadow-black/50">
-                  <img
+                  <Image
                     alt="photo-1434389677669"
-                    src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
+                    src={ropa}
                     className="h-56 w-full object-cover rounded-md"
+                    width={"100%"}
+                    height={"100%"}
                   />
 
                   <div className="mt-2">

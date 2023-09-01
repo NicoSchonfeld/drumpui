@@ -5,11 +5,8 @@ import { FiCopy } from "react-icons/fi";
 import { BsCheck2 } from "react-icons/bs";
 
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import { motion, AnimatePresence } from "framer-motion";
-
-import useSound from "use-sound";
 
 const CodeComponent = ({ children, code = "Next.js", copyCode }) => {
   const [copy, setCopy] = useState(false);
@@ -88,7 +85,6 @@ const CodeComponent = ({ children, code = "Next.js", copyCode }) => {
 
         <SyntaxHighlighter
           language="jsx"
-          style={atomOneDark}
           customStyle={{ background: "transparent" }}
           className={`scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent`}
         >

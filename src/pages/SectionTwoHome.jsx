@@ -47,7 +47,7 @@ const SectionTwoHome = ({ refScroll }) => {
             </motion.div>
 
             <div className="rounded-lg w-[310px] md:w-[500px] lg:w-[1000px] h-[600px] shadow-xl flex lg:flex-row flex-col overflow-hidden border border-black/20 dark:border-white/20">
-              <div className="w-full overflow-auto">
+              <div className="bg-gray-900 w-full overflow-auto">
                 <CodeComponent copyCode={codeDemoSectionTwo}>
                   {codeDemoSectionTwo}
                 </CodeComponent>

@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import styled from "@/styles/lineGradiant.module.css";
 
-/* import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs"; */
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import Image from "next/image";
 

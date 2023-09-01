@@ -85,7 +85,7 @@ const CodeComponent = ({ children, code = "Next.js", copyCode }) => {
 
         <SyntaxHighlighter
           language="jsx"
-          customStyle={{ background: "transparent" }}
+          customStyle={{ background: "transparent", color: "white" }}
           className={`scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent`}
         >
           {children}

@@ -65,7 +65,7 @@ const App = () => {
 
         <HomePage theme={theme} />
 
-        <SectionTwoHome refScroll={ref} />
+        {/* <SectionTwoHome refScroll={ref} /> */}
 
         <SectionThreeHome refScroll={ref} />
 

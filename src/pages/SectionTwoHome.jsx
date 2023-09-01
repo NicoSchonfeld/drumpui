@@ -4,13 +4,11 @@ import React, { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import styled from "@/styles/lineGradiant.module.css";
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
-
 import Image from "next/image";
 
 import ropa from "@/assets/ropa.jpg";
 import { codeDemoSectionTwo } from "@/components/CodeExapmleOfComponents";
+import CodeComponentDemoHomeCard from "@/components/codeComponentDemoHomeCard";
 
 const SectionTwoHome = ({ refScroll }) => {
   const { scrollYProgress } = useScroll({
@@ -49,14 +47,9 @@ const SectionTwoHome = ({ refScroll }) => {
 
             <div className="rounded-lg w-[310px] md:w-[500px] lg:w-[1000px] h-[600px] shadow-xl flex lg:flex-row flex-col overflow-hidden border border-black/20 dark:border-white/20">
               <div className="bg-gray-900 w-full p-5 overflow-auto text-[10px] flex flex-wrap">
-                <SyntaxHighlighter
-                  language="jsx"
-                  style={atomOneDarkReasonable}
-                  customStyle={{ background: "transparent" }}
-                  className={`scrollbar-thin scrollbar-thumb-white scrollbar-track-transparent`}
-                >
+                <CodeComponentDemoHomeCard>
                   {codeDemoSectionTwo}
-                </SyntaxHighlighter>
+                </CodeComponentDemoHomeCard>
               </div>
               <div className="bg-white w-full p-5 flex items-center justify-center">
                 <div className="w-[200px] md:w-[400px] bg-white dark:bg-gray-900 border dark:border-black rounded-lg p-4 shadow-sm shadow-indigo-100 dark:shadow-black/50">

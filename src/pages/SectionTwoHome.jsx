@@ -7,6 +7,7 @@ import styled from "@/styles/lineGradiant.module.css";
 import Image from "next/image";
 
 import ropa from "@/assets/ropa.jpg";
+
 import { codeDemoSectionTwo } from "@/components/CodeExapmleOfComponents";
 import CodeComponent from "@/components/CodeComponent";
 
@@ -47,7 +48,7 @@ const SectionTwoHome = ({ refScroll }) => {
 
             <div className="rounded-lg w-[310px] md:w-[500px] lg:w-[1000px] h-[600px] shadow-xl flex lg:flex-row flex-col overflow-hidden border border-black/20 dark:border-white/20">
               <div className="w-full overflow-auto">
-                <CodeComponent>{codeDemoSectionTwo}</CodeComponent>
+                {/* <CodeComponent>{codeDemoSectionTwo}</CodeComponent> */}
               </div>
               <div className="bg-white w-full p-5 flex items-center justify-center">
                 <div className="w-[200px] md:w-[400px] bg-white dark:bg-gray-900 border dark:border-black rounded-lg p-4 shadow-sm shadow-indigo-100 dark:shadow-black/50">

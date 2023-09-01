@@ -86,14 +86,6 @@ const SectionTwoHome = ({ refScroll }) => {
                 </div>
               </div>
             </div>
-
-            {/* <Image
-              className="rounded-lg md:w-[1000px] w-96"
-              src={pepe}
-              width={1000}
-              height={500}
-              alt="Picture of the author"
-            /> */}
           </motion.div>
 
           <motion.div

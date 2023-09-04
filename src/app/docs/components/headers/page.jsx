@@ -85,7 +85,7 @@ const Table = () => {
 
               <WindowsComponents>
                 <div className="space-y-5">
-                  <header className="bg-gray-900 w-full py-3">
+                  <header className="bg-gray-900 w-full lg:w-[750px] py-3">
                     <nav className="container mx-auto flex items-center justify-between px-10">
                       <div>
                         <p className="md:text-2xl text-md font-bold text-white">
@@ -111,10 +111,6 @@ const Table = () => {
                       <div className="space-x-5 md:not-sr-only sr-only">
                         <button className="transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
                           Login
-                        </button>
-
-                        <button className="transition rounded border border-pink-600 bg-transparent px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
-                          Register
                         </button>
                       </div>
                     </nav>
@@ -148,10 +144,6 @@ const Table = () => {
                           <button className="transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
                             Login
                           </button>
-
-                          <button className="transition rounded border border-pink-600 bg-transparent px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
-                            Register
-                          </button>
                         </div>
                       </div>
                     </nav>
@@ -184,10 +176,6 @@ const Table = () => {
                         <button className="transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
                           Login
                         </button>
-
-                        <button className="transition rounded border border-pink-600 bg-transparent px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
-                          Register
-                        </button>
                       </div>
                     </nav>
                   </header>
@@ -218,10 +206,6 @@ const Table = () => {
                       <div className="space-x-5 md:not-sr-only sr-only">
                         <button className="transition rounded border border-pink-600 bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
                           Login
-                        </button>
-
-                        <button className="transition rounded border border-pink-600 bg-transparent px-4 py-2 text-sm font-medium text-white hover:bg-pink-700 hover:border-pink-700 hover:text-white focus:outline-none">
-                          Register
                         </button>
                       </div>
                     </nav>

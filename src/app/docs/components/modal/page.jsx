@@ -193,7 +193,7 @@ const Modal = () => {
               <p className="my-5">
                 To make this type of animations we use Framer-Motion. <br /> You
                 can copy this command and place it in your terminal to install
-                the dependencies. <br /> We also leave you your{" "}
+                the dependencies. <br /> We also leave you the{" "}
                 <a
                   href="https://www.framer.com/motion/"
                   target="_blank"
@@ -305,7 +305,7 @@ const Modal = () => {
               <p className="my-5">
                 To make this type of animations we use Framer-Motion. <br /> You
                 can copy this command and place it in your terminal to install
-                the dependencies. <br /> We also leave you your{" "}
+                the dependencies. <br /> We also leave you the{" "}
                 <a
                   href="https://www.framer.com/motion/"
                   target="_blank"
@@ -408,7 +408,7 @@ const Modal = () => {
               <p className="my-5">
                 To make this type of animations we use Framer-Motion. <br /> You
                 can copy this command and place it in your terminal to install
-                the dependencies. <br /> We also leave you your{" "}
+                the dependencies. <br /> We also leave you the{" "}
                 <a
                   href="https://www.framer.com/motion/"
                   target="_blank"

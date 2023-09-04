@@ -117,8 +117,8 @@ const Intallation = () => {
                 We recommend that you use Nextjs to create projects as Tailwind
                 CSS is easier to install.
                 <br />
-                We leave you your documentation and your command to place in the
-                terminal.
+                We leave you the documentation and the remote control to place
+                in the terminal.
               </p>
 
               <div className="mt-5">
